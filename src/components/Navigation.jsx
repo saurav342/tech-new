@@ -34,7 +34,7 @@ const Navigation = ({ onContactClick }) => {
               aria-label="Techinium Home"
             >
               <img 
-                src="/assets/favicon.svg" 
+                src="/favicon.svg" 
                 alt="Techinium Logo" 
                 className="w-8 h-8"
               />
@@ -64,7 +64,7 @@ const Navigation = ({ onContactClick }) => {
           {/* CTA Button */}
           <div className="flex items-center space-x-4">
             <a
-              href="https://cal.com/team/creme-digital/mvp-discovery"
+              href="https://cal.com/techinium/15min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
@@ -109,7 +109,7 @@ const Navigation = ({ onContactClick }) => {
               </Link>
             ))}
             <a
-              href="https://cal.com/team/creme-digital/mvp-discovery"
+              href="https://cal.com/techinium/15min"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}

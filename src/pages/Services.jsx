@@ -279,7 +279,7 @@ const Services = ({ onContactClick }) => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://cal.com/team/creme-digital/mvp-discovery"
+                href="https://cal.com/techinium/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition-colors"

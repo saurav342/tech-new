@@ -124,7 +124,7 @@ const Home = ({ onContactClick }) => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <a
-                href="https://cal.com/team/creme-digital/mvp-discovery"
+                href="https://cal.com/techinium/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-lg px-8 py-4 flex items-center gap-2 hover:scale-105 transition-transform"
@@ -344,7 +344,7 @@ const Home = ({ onContactClick }) => {
                 </li>
               </ul>
               <a
-                href="https://cal.com/team/creme-digital/mvp-discovery"
+                href="https://cal.com/techinium/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline w-full text-center block"
@@ -388,7 +388,7 @@ const Home = ({ onContactClick }) => {
                 </li>
               </ul>
               <a
-                href="https://cal.com/team/creme-digital/mvp-discovery"
+                href="https://cal.com/techinium/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary w-full text-center block"
@@ -427,7 +427,7 @@ const Home = ({ onContactClick }) => {
                 </li>
               </ul>
               <a
-                href="https://cal.com/team/creme-digital/mvp-discovery"
+                href="https://cal.com/techinium/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline w-full text-center block"
@@ -502,7 +502,7 @@ const Home = ({ onContactClick }) => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://cal.com/team/creme-digital/mvp-discovery"
+                href="https://cal.com/techinium/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-lg px-8 py-4 flex items-center gap-2 hover:scale-105 transition-transform"
@@ -511,7 +511,7 @@ const Home = ({ onContactClick }) => {
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
-                href="https://cal.com/team/creme-digital/mvp-discovery"
+                href="https://cal.com/techinium/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary text-lg px-8 py-4 hover:scale-105 transition-transform"
