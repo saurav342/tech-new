@@ -1,0 +1,664 @@
+{
+  "site_map": [
+    {
+      "page": "Home",
+      "purpose": "Primary landing page with hero, value props, pricing preview, and main CTAs"
+    },
+    {
+      "page": "Services",
+      "purpose": "Detailed breakdown of Launch/Scale/Growth packages with deliverables"
+    },
+    {
+      "page": "Process",
+      "purpose": "4-step methodology explanation to build trust and set expectations"
+    },
+    {
+      "page": "Pricing",
+      "purpose": "Full pricing comparison with package details and booking CTAs"
+    },
+    {
+      "page": "Case Studies",
+      "purpose": "3 detailed success stories with metrics and outcomes"
+    },
+    {
+      "page": "About",
+      "purpose": "Team credentials, company story, and founder expertise"
+    },
+    {
+      "page": "Blog",
+      "purpose": "SEO content hub with startup/product development insights"
+    },
+    {
+      "page": "Contact",
+      "purpose": "Discovery call booking form and contact information"
+    }
+  ],
+  "hero": {
+    "headlines": {
+      "short": "AI-Powered Product Studio for Startups",
+      "medium": "From Idea to Market: AI-Powered Product Development for Ambitious Startups",
+      "long": "Transform Your Startup Vision into Market-Ready Products with Our AI-Powered Development Studio"
+    },
+    "ctas": [
+      {
+        "primary": "Book Discovery Call",
+        "secondary": "View Our Process"
+      }
+    ],
+    "subhead": "Launch faster, scale smarter, grow sustainably with proven AI-driven development methodologies.",
+    "visual_direction": "Clean animated illustration showing startup journey from idea to market success, with subtle AI/tech elements integrated"
+  },
+  "pages": {
+    "home": {
+      "h1": "AI-Powered Product Studio for Ambitious Startups",
+      "sections": [
+        {
+          "h2": "Launch Faster with AI-Driven Development",
+          "content": "Our proprietary AI methodologies accelerate product development by 3x while maintaining enterprise-grade quality. From MVP to market-ready solutions.",
+          "visual": "Rocket launch icon with speed lines",
+          "cta": "See Launch Package"
+        },
+        {
+          "h2": "Scale with Confidence",
+          "content": "Built-in scalability patterns and performance optimization ensure your product grows seamlessly with your user base and business needs.",
+          "visual": "Growth chart with upward trending arrow",
+          "cta": "Explore Scale Solutions"
+        },
+        {
+          "h2": "Grow Sustainably",
+          "content": "Data-driven growth strategies and conversion optimization help you acquire and retain customers profitably at every stage.",
+          "visual": "Sustainable growth tree with multiple branches",
+          "cta": "View Growth Package"
+        }
+      ]
+    },
+    "services": {
+      "h1": "Comprehensive Product Development Services",
+      "sections": [
+        {
+          "h2": "Launch Package",
+          "content": "Complete MVP development with AI-accelerated coding, user research, and go-to-market strategy. Perfect for pre-seed startups ready to validate.",
+          "visual": "Launch rocket with checklist",
+          "cta": "Get Started"
+        },
+        {
+          "h2": "Scale Package",
+          "content": "Advanced feature development, performance optimization, and team scaling support. Ideal for post-MVP startups experiencing growth.",
+          "visual": "Scaling gears with performance metrics",
+          "cta": "Learn More"
+        },
+        {
+          "h2": "Growth Package",
+          "content": "Conversion optimization, advanced analytics, and growth engineering. For Series A startups focused on sustainable expansion.",
+          "visual": "Growth funnel with conversion metrics",
+          "cta": "Book Strategy Call"
+        }
+      ]
+    },
+    "process": {
+      "h1": "Our Proven 4-Step Development Process",
+      "sections": [
+        {
+          "h2": "Discovery & Strategy",
+          "content": "Deep dive into your market, users, and technical requirements. We define success metrics and create a comprehensive roadmap.",
+          "visual": "Magnifying glass with strategy document",
+          "cta": "See Case Studies"
+        },
+        {
+          "h2": "AI-Accelerated Development",
+          "content": "Leverage our proprietary AI tools and methodologies to build faster while maintaining code quality and scalability standards.",
+          "visual": "AI brain with code snippets",
+          "cta": "View Our Tools"
+        },
+        {
+          "h2": "Testing & Optimization",
+          "content": "Rigorous testing, performance optimization, and user feedback integration ensure your product meets market demands.",
+          "visual": "Quality assurance checklist with metrics",
+          "cta": "See Results"
+        }
+      ]
+    },
+    "pricing": {
+      "h1": "Transparent Pricing for Every Stage",
+      "sections": [
+        {
+          "h2": "Launch Package",
+          "content": "Perfect for pre-seed startups. Complete MVP development with AI acceleration, user research, and 3-month support.",
+          "visual": "Starter package with essential tools",
+          "cta": "Start Your Launch"
+        },
+        {
+          "h2": "Scale Package",
+          "content": "Ideal for growing startups. Advanced features, performance optimization, team training, and 6-month support included.",
+          "visual": "Scaling package with advanced features",
+          "cta": "Scale Your Product"
+        },
+        {
+          "h2": "Growth Package",
+          "content": "For Series A startups. Conversion optimization, growth engineering, advanced analytics, and 12-month strategic partnership.",
+          "visual": "Premium package with growth tools",
+          "cta": "Accelerate Growth"
+        }
+      ]
+    },
+    "case_studies": {
+      "h1": "Success Stories from Ambitious Startups",
+      "sections": [
+        {
+          "h2": "FinTech Startup: 10x User Growth",
+          "content": "Helped a pre-seed fintech startup launch their MVP in 8 weeks and achieve 10x user growth within 6 months through AI-optimized development.",
+          "visual": "Growth chart showing exponential increase",
+          "cta": "Read Full Case Study"
+        },
+        {
+          "h2": "SaaS Platform: 300% Conversion Improvement",
+          "content": "Optimized a B2B SaaS platform's conversion funnel, resulting in 300% improvement in trial-to-paid conversion rates and 2x revenue growth.",
+          "visual": "Conversion funnel with improved metrics",
+          "cta": "See Results"
+        },
+        {
+          "h2": "Marketplace: $2M ARR Achievement",
+          "content": "Scaled a marketplace platform from MVP to $2M ARR in 18 months through strategic feature development and growth optimization.",
+          "visual": "Revenue growth chart with milestone markers",
+          "cta": "Learn Our Strategy"
+        }
+      ]
+    },
+    "about": {
+      "h1": "Built by Founders, for Founders",
+      "sections": [
+        {
+          "h2": "Our Story",
+          "content": "Founded by serial entrepreneurs who've built and scaled multiple startups. We understand the challenges of early-stage product development.",
+          "visual": "Team photo with startup journey timeline",
+          "cta": "Meet the Team"
+        },
+        {
+          "h2": "Our Expertise",
+          "content": "Combined 50+ years of startup experience across product development, AI/ML, growth marketing, and technical architecture.",
+          "visual": "Expertise icons with years of experience",
+          "cta": "View Credentials"
+        },
+        {
+          "h2": "Our Mission",
+          "content": "Democratize access to world-class product development through AI-powered tools and methodologies for ambitious startups.",
+          "visual": "Mission statement with global impact",
+          "cta": "Join Our Mission"
+        }
+      ]
+    },
+    "contact": {
+      "h1": "Ready to Build Your Next Product?",
+      "sections": [
+        {
+          "h2": "Book a Discovery Call",
+          "content": "30-minute strategy session to understand your needs and recommend the best approach for your startup's growth stage.",
+          "visual": "Calendar booking interface",
+          "cta": "Schedule Now"
+        },
+        {
+          "h2": "Get a Custom Quote",
+          "content": "Tell us about your project and we'll provide a detailed proposal with timeline, deliverables, and investment requirements.",
+          "visual": "Quote document with pricing breakdown",
+          "cta": "Request Quote"
+        },
+        {
+          "h2": "Join Our Community",
+          "content": "Connect with other founders and get early access to our AI development tools and startup resources.",
+          "visual": "Community network with connections",
+          "cta": "Join Community"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "name": "Navigation",
+      "props": {
+        "logo": "string",
+        "menu_items": "array",
+        "cta_text": "string",
+        "cta_link": "string",
+        "variant": "light|dark"
+      }
+    },
+    {
+      "name": "Hero",
+      "props": {
+        "headline": "string",
+        "subhead": "string",
+        "primary_cta": "string",
+        "secondary_cta": "string",
+        "background_image": "string",
+        "variant": "centered|left-aligned"
+      }
+    },
+    {
+      "name": "PricingCard",
+      "props": {
+        "title": "string",
+        "price": "string",
+        "features": "array",
+        "cta_text": "string",
+        "cta_link": "string",
+        "popular": "boolean",
+        "variant": "standard|featured"
+      }
+    },
+    {
+      "name": "TestimonialCarousel",
+      "props": {
+        "testimonials": "array",
+        "autoplay": "boolean",
+        "show_dots": "boolean",
+        "variant": "card|quote"
+      }
+    },
+    {
+      "name": "FeatureGrid",
+      "props": {
+        "features": "array",
+        "columns": "number",
+        "show_icons": "boolean",
+        "variant": "grid|list"
+      }
+    },
+    {
+      "name": "FAQAccordion",
+      "props": {
+        "questions": "array",
+        "allow_multiple": "boolean",
+        "variant": "standard|minimal"
+      }
+    },
+    {
+      "name": "ContactFormModal",
+      "props": {
+        "title": "string",
+        "fields": "array",
+        "submit_text": "string",
+        "success_message": "string",
+        "variant": "modal|inline"
+      }
+    }
+  ],
+  "pricing": {
+    "tiers": [
+      {
+        "name": "Launch",
+        "price_usd": "$15,000",
+        "price_inr": "₹1,245,000",
+        "justification": "Complete MVP development with AI acceleration and 3-month support",
+        "deliverables": [
+          "AI-accelerated MVP development (8-12 weeks)",
+          "User research and market validation",
+          "Technical architecture and scalability planning",
+          "3-month post-launch support and optimization",
+          "Go-to-market strategy and launch support",
+          "Performance monitoring and analytics setup"
+        ],
+        "billing": "50% upfront, 50% on delivery",
+        "legal": "Standard terms with IP protection and confidentiality"
+      },
+      {
+        "name": "Scale",
+        "price_usd": "$35,000",
+        "price_inr": "₹2,905,000",
+        "justification": "Advanced features, performance optimization, and 6-month strategic partnership",
+        "deliverables": [
+          "Advanced feature development and integration",
+          "Performance optimization and scalability improvements",
+          "Team training and knowledge transfer",
+          "6-month strategic partnership and support",
+          "Advanced analytics and growth tracking",
+          "Competitive analysis and market positioning"
+        ],
+        "billing": "40% upfront, 30% mid-project, 30% on completion",
+        "legal": "Extended terms with performance guarantees"
+      },
+      {
+        "name": "Growth",
+        "price_usd": "$75,000",
+        "price_inr": "₹6,225,000",
+        "justification": "Full growth engineering, conversion optimization, and 12-month strategic partnership",
+        "deliverables": [
+          "Conversion optimization and growth engineering",
+          "Advanced analytics and data science implementation",
+          "Marketing automation and growth tools integration",
+          "12-month strategic partnership and quarterly reviews",
+          "Executive coaching and strategic advisory",
+          "Access to proprietary growth methodologies and tools"
+        ],
+        "billing": "30% upfront, 40% mid-project, 30% on completion",
+        "legal": "Premium terms with ROI guarantees and equity options"
+      }
+    ]
+  },
+  "process": [
+    {
+      "step": 1,
+      "title": "Discovery & Strategy",
+      "description": "Deep market research, user interviews, and technical architecture planning",
+      "icon": "search-strategy"
+    },
+    {
+      "step": 2,
+      "title": "AI-Accelerated Development",
+      "description": "Proprietary AI tools and methodologies for faster, higher-quality development",
+      "icon": "ai-development"
+    },
+    {
+      "step": 3,
+      "title": "Testing & Optimization",
+      "description": "Rigorous testing, performance optimization, and user feedback integration",
+      "icon": "testing-optimization"
+    },
+    {
+      "step": 4,
+      "title": "Launch & Growth",
+      "description": "Go-to-market execution, growth tracking, and ongoing optimization support",
+      "icon": "launch-growth"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Techinium transformed our idea into a market-ready product in just 8 weeks. Their AI-driven approach saved us months of development time.",
+      "role": "CEO, FinTech Startup",
+      "outcome": "Launched MVP 3x faster than projected timeline"
+    },
+    {
+      "quote": "The growth optimization strategies increased our conversion rates by 300%. We couldn't have achieved this without their expertise.",
+      "role": "Founder, B2B SaaS Platform",
+      "outcome": "Achieved 300% improvement in trial-to-paid conversion"
+    },
+    {
+      "quote": "Their technical architecture scaled seamlessly with our user growth. Zero downtime during our 10x user expansion phase.",
+      "role": "CTO, Marketplace Startup",
+      "outcome": "Scaled to 10x users without performance issues"
+    },
+    {
+      "quote": "The AI development tools and methodologies are game-changing. Our team learned so much working alongside their experts.",
+      "role": "Product Lead, HealthTech Startup",
+      "outcome": "Team productivity increased by 250% post-engagement"
+    },
+    {
+      "quote": "From MVP to $2M ARR in 18 months. Their strategic guidance and technical execution were instrumental in our success.",
+      "role": "Co-founder, E-commerce Platform",
+      "outcome": "Reached $2M ARR milestone ahead of schedule"
+    },
+    {
+      "quote": "The ongoing support and optimization helped us maintain growth momentum. They're true partners in our journey.",
+      "role": "Founder, EdTech Startup",
+      "outcome": "Maintained 40% month-over-month growth for 12 months"
+    }
+  ],
+  "seo": {
+    "meta_title": "AI-Powered Product Studio for Startups | Techinium",
+    "meta_description": "Transform your startup vision into market-ready products with our AI-powered development studio. Launch faster, scale smarter, grow sustainably.",
+    "keywords": [
+      "AI product development",
+      "startup MVP development",
+      "AI-powered software development",
+      "startup product studio",
+      "AI development services",
+      "startup technical partner",
+      "AI-accelerated development",
+      "startup growth engineering"
+    ],
+    "h1_suggestions": {
+      "home": "AI-Powered Product Studio for Ambitious Startups",
+      "services": "Comprehensive Product Development Services",
+      "process": "Our Proven 4-Step Development Process",
+      "pricing": "Transparent Pricing for Every Stage",
+      "case_studies": "Success Stories from Ambitious Startups",
+      "about": "Built by Founders, for Founders",
+      "contact": "Ready to Build Your Next Product?"
+    }
+  },
+  "analytics": {
+    "tracking_setup": {
+      "primary": "Google Analytics 4",
+      "secondary": "Google Tag Manager",
+      "user_behavior": "Hotjar or FullStory",
+      "conversion_tracking": "Custom GTM events"
+    },
+    "gtm_events": [
+      {
+        "event": "contact_submitted",
+        "category": "Lead Generation",
+        "action": "Form Submission",
+        "label": "Contact Form"
+      },
+      {
+        "event": "book_call",
+        "category": "Lead Generation",
+        "action": "Call Booking",
+        "label": "Discovery Call"
+      },
+      {
+        "event": "pricing_click",
+        "category": "Pricing",
+        "action": "Package View",
+        "label": "Pricing Page"
+      },
+      {
+        "event": "video_play",
+        "category": "Engagement",
+        "action": "Video Play",
+        "label": "Process Video"
+      }
+    ],
+    "privacy_banner": "We use cookies to improve your experience and analyze site performance. By continuing to use our site, you consent to our use of cookies.",
+    "cookie_policy": "Essential cookies for site functionality, analytics cookies for performance insights, and marketing cookies for personalized content."
+  },
+  "assets": {
+    "images": [
+      {
+        "name": "hero_illustration",
+        "description": "Clean animated illustration showing startup journey from idea to market success",
+        "alt_text": "Animated illustration of startup growth journey with AI-powered development elements",
+        "stock_prompt": "Modern startup team working with AI technology, clean vector style, professional business illustration"
+      },
+      {
+        "name": "feature_ai_development",
+        "description": "AI development process visualization",
+        "alt_text": "AI-powered development process with code and automation elements",
+        "stock_prompt": "AI brain with code snippets, modern tech illustration, clean design"
+      },
+      {
+        "name": "process_timeline",
+        "description": "4-step process visualization",
+        "alt_text": "Four-step development process timeline with icons and progress indicators",
+        "stock_prompt": "Process timeline with numbered steps, professional business workflow illustration"
+      },
+      {
+        "name": "team_photo",
+        "description": "Professional team photo for About page",
+        "alt_text": "Techinium team members in modern office setting",
+        "stock_prompt": "Diverse professional team in modern office, startup environment, confident and approachable"
+      }
+    ],
+    "icons": [
+      "rocket-launch",
+      "growth-chart",
+      "ai-brain",
+      "search-strategy",
+      "testing-optimization",
+      "launch-growth",
+      "scaling-gears",
+      "conversion-funnel",
+      "quality-assurance",
+      "performance-metrics"
+    ],
+    "stock_photo_prompts": [
+      "Modern startup team collaborating with AI technology",
+      "Professional developers working with advanced coding tools",
+      "Business growth chart with upward trending metrics",
+      "Clean office environment with tech startup atmosphere",
+      "Diverse team members in strategic planning session",
+      "AI and machine learning concept visualization",
+      "Product development workflow with quality assurance",
+      "Startup founders presenting to investors or team"
+    ]
+  },
+  "dev_assets": {
+    "cms_schema": {
+      "pages": {
+        "home": {
+          "hero_headline": "string",
+          "hero_subhead": "string",
+          "hero_cta_primary": "string",
+          "hero_cta_secondary": "string",
+          "value_props": "array",
+          "pricing_preview": "object",
+          "testimonials": "array"
+        },
+        "services": {
+          "page_title": "string",
+          "packages": "array",
+          "features": "array",
+          "cta_sections": "array"
+        },
+        "process": {
+          "page_title": "string",
+          "steps": "array",
+          "timeline": "object",
+          "benefits": "array"
+        },
+        "pricing": {
+          "page_title": "string",
+          "tiers": "array",
+          "faq": "array",
+          "cta": "object"
+        },
+        "case_studies": {
+          "page_title": "string",
+          "studies": "array",
+          "metrics": "array",
+          "testimonials": "array"
+        },
+        "about": {
+          "page_title": "string",
+          "team": "array",
+          "story": "object",
+          "mission": "object"
+        },
+        "contact": {
+          "page_title": "string",
+          "form_fields": "array",
+          "contact_info": "object",
+          "cta": "object"
+        }
+      },
+      "components": {
+        "navigation": {
+          "logo": "string",
+          "menu_items": "array",
+          "cta": "object"
+        },
+        "hero": {
+          "headline": "string",
+          "subhead": "string",
+          "ctas": "array",
+          "background": "string"
+        },
+        "pricing_card": {
+          "title": "string",
+          "price": "string",
+          "features": "array",
+          "cta": "object",
+          "popular": "boolean"
+        },
+        "testimonial": {
+          "quote": "string",
+          "author": "string",
+          "role": "string",
+          "outcome": "string"
+        }
+      }
+    }
+  },
+  "accessibility": {
+    "checklist": [
+      "Keyboard navigation support for all interactive elements",
+      "Color contrast ratio of at least 4.5:1 for normal text",
+      "Color contrast ratio of at least 3:1 for large text",
+      "ARIA labels on all form inputs and interactive components",
+      "Alt text for all images and decorative elements",
+      "Focus indicators visible on all focusable elements",
+      "Semantic HTML structure with proper heading hierarchy",
+      "Screen reader compatible navigation and content structure"
+    ],
+    "a11y_tests": [
+      "Test complete site navigation using only keyboard (Tab, Enter, Arrow keys)",
+      "Verify color contrast ratios meet WCAG 2.1 AA standards",
+      "Test with screen reader (NVDA, JAWS, or VoiceOver) for content flow",
+      "Validate form accessibility with error states and success messages",
+      "Check responsive design accessibility on mobile devices"
+    ]
+  },
+  "content_blocks": {
+    "hero": {
+      "headline": "AI-Powered Product Studio for Ambitious Startups",
+      "subhead": "Launch faster, scale smarter, grow sustainably with proven AI-driven development methodologies.",
+      "cta_primary": "Book Discovery Call",
+      "cta_secondary": "View Our Process",
+      "microcopy": "30-min strategy session • No commitment required"
+    },
+    "value_props": [
+      {
+        "title": "Launch 3x Faster",
+        "description": "AI-accelerated development reduces time-to-market while maintaining enterprise quality standards."
+      },
+      {
+        "title": "Scale with Confidence",
+        "description": "Built-in scalability patterns ensure seamless growth from MVP to market leader."
+      },
+      {
+        "title": "Grow Sustainably",
+        "description": "Data-driven strategies optimize conversion and retention for profitable expansion."
+      }
+    ],
+    "social_proof": [
+      "50+ startups launched successfully",
+      "Average 3x faster time-to-market",
+      "95% client satisfaction rate"
+    ],
+    "email_subjects": [
+      "Your startup's next breakthrough starts here",
+      "3x faster product development (seriously)",
+      "From idea to $2M ARR in 18 months",
+      "Why 50+ startups chose Techinium",
+      "The AI advantage your competitors don't have",
+      "Ready to launch your MVP in 8 weeks?"
+    ],
+    "nurture_sequence": [
+      {
+        "subject": "Welcome to Techinium - Your Product Development Journey Starts Here",
+        "preview": "Thanks for your interest! Here's what makes us different...",
+        "body": "Welcome to Techinium! We're excited you're exploring AI-powered product development for your startup. Our proprietary methodologies have helped 50+ startups launch 3x faster while maintaining enterprise-grade quality. In the next few emails, I'll share insights about our proven 4-step process, real success stories, and how we can help accelerate your product development. Ready to transform your startup vision into market reality?"
+      },
+      {
+        "subject": "The Secret to 3x Faster Product Development",
+        "preview": "Hint: It's not just about coding faster...",
+        "body": "Most startups spend months on development that could be completed in weeks. The secret isn't just coding faster - it's about AI-accelerated methodologies, strategic architecture, and proven development patterns. Our Launch package has helped startups like yours go from idea to market-ready MVP in just 8-12 weeks. Want to see how this could work for your startup? Book a 30-minute discovery call to explore your specific needs and timeline."
+      },
+      {
+        "subject": "From MVP to $2M ARR: A Real Success Story",
+        "preview": "How one fintech startup achieved explosive growth...",
+        "body": "Meet Sarah, CEO of a fintech startup who came to us with just an idea. Using our AI-powered development approach, we launched her MVP in 8 weeks and helped scale to $2M ARR in 18 months. The key wasn't just faster development - it was strategic architecture, growth optimization, and ongoing partnership. Ready to write your own success story? Let's discuss how our proven methodologies can accelerate your startup's growth. Book your discovery call today."
+      }
+    ]
+  },
+  "design_notes": [
+    "Use a 12-column grid system with consistent 24px gutters for clean, organized layouts",
+    "Implement a typography scale with 4px baseline grid: H1 (48px), H2 (36px), H3 (24px), Body (16px)",
+    "Make primary CTAs highly prominent with high-contrast colors and generous padding (minimum 44px touch targets)",
+    "Include trust signals throughout: client logos, testimonials, security badges, and team credentials",
+    "Use subtle micro-animations for engagement: hover states, loading indicators, and scroll-triggered reveals",
+    "Implement a consistent color palette with primary brand color, neutral grays, and semantic colors for success/error states",
+    "Ensure mobile-first responsive design with breakpoints at 768px (tablet) and 1024px (desktop)",
+    "Create visual hierarchy through spacing, typography, and color to guide user attention to key conversion points"
+  ],
+  "css_prototype": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Techinium - AI-Powered Product Studio for Startups</title>\n    <script src=\"https://cdn.tailwindcss.com\"></script>\n    <style>\n        .gradient-bg {\n            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n        }\n        .card-hover {\n            transition: transform 0.3s ease, box-shadow 0.3s ease;\n        }\n        .card-hover:hover {\n            transform: translateY(-4px);\n            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);\n        }\n    </style>\n</head>\n<body class=\"bg-gray-50\">\n    <!-- Navigation -->\n    <nav class=\"bg-white shadow-sm sticky top-0 z-50\">\n        <div class=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\n            <div class=\"flex justify-between items-center h-16\">\n                <div class=\"flex items-center\">\n                    <div class=\"text-2xl font-bold text-gray-900\">Techinium</div>\n                </div>\n                <div class=\"hidden md:block\">\n                    <div class=\"ml-10 flex items-baseline space-x-8\">\n                        <a href=\"#services\" class=\"text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium\">Services</a>\n                        <a href=\"#process\" class=\"text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium\">Process</a>\n                        <a href=\"#pricing\" class=\"text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium\">Pricing</a>\n                        <a href=\"#case-studies\" class=\"text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium\">Case Studies</a>\n                        <a href=\"#about\" class=\"text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium\">About</a>\n                    </div>\n                </div>\n                <div class=\"flex items-center space-x-4\">\n                    <button class=\"bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors\">\n                        Book Discovery Call\n                    </button>\n                </div>\n            </div>\n        </div>\n    </nav>\n\n    <!-- Hero Section -->\n    <main>\n        <section class=\"gradient-bg text-white py-20\">\n            <div class=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\n                <div class=\"text-center\">\n                    <h1 class=\"text-4xl md:text-6xl font-bold mb-6\">\n                        AI-Powered Product Studio<br>\n                        <span class=\"text-yellow-300\">for Ambitious Startups</span>\n                    </h1>\n                    <p class=\"text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto\">\n                        Launch faster, scale smarter, grow sustainably with proven AI-driven development methodologies.\n                    </p>\n                    <div class=\"flex flex-col sm:flex-row gap-4 justify-center items-center\">\n                        <button class=\"bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors\">\n                            Book Discovery Call\n                        </button>\n                        <button class=\"border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition-colors\">\n                            View Our Process\n                        </button>\n                    </div>\n                    <p class=\"text-sm text-blue-200 mt-4\">30-min strategy session • No commitment required</p>\n                </div>\n            </div>\n        </section>\n\n        <!-- Value Props Section -->\n        <section class=\"py-20 bg-white\">\n            <div class=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\n                <div class=\"text-center mb-16\">\n                    <h2 class=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\">Why Choose Techinium?</h2>\n                    <p class=\"text-xl text-gray-600 max-w-2xl mx-auto\">\n                        Our AI-powered approach delivers results that traditional development can't match.\n                    </p>\n                </div>\n                <div class=\"grid md:grid-cols-3 gap-8\">\n                    <div class=\"text-center p-8 rounded-xl bg-gray-50 card-hover\">\n                        <div class=\"w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6\">\n                            <svg class=\"w-8 h-8 text-blue-600\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n                                <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"></path>\n                            </svg>\n                        </div>\n                        <h3 class=\"text-xl font-bold text-gray-900 mb-4\">Launch 3x Faster</h3>\n                        <p class=\"text-gray-600\">\n                            AI-accelerated development reduces time-to-market while maintaining enterprise quality standards.\n                        </p>\n                    </div>\n                    <div class=\"text-center p-8 rounded-xl bg-gray-50 card-hover\">\n                        <div class=\"w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6\">\n                            <svg class=\"w-8 h-8 text-green-600\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n                                <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z\"></path>\n                            </svg>\n                        </div>\n                        <h3 class=\"text-xl font-bold text-gray-900 mb-4\">Scale with Confidence</h3>\n                        <p class=\"text-gray-600\">\n                            Built-in scalability patterns ensure seamless growth from MVP to market leader.\n                        </p>\n                    </div>\n                    <div class=\"text-center p-8 rounded-xl bg-gray-50 card-hover\">\n                        <div class=\"w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6\">\n                            <svg class=\"w-8 h-8 text-purple-600\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n                                <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\"></path>\n                            </svg>\n                        </div>\n                        <h3 class=\"text-xl font-bold text-gray-900 mb-4\">Grow Sustainably</h3>\n                        <p class=\"text-gray-600\">\n                            Data-driven strategies optimize conversion and retention for profitable expansion.\n                        </p>\n                    </div>\n                </div>\n            </div>\n        </section>\n\n        <!-- Pricing Summary -->\n        <section id=\"pricing\" class=\"py-20 bg-gray-50\">\n            <div class=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\n                <div class=\"text-center mb-16\">\n                    <h2 class=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\">Transparent Pricing for Every Stage</h2>\n                    <p class=\"text-xl text-gray-600 max-w-2xl mx-auto\">\n                        Choose the package that matches your startup's current needs and growth stage.\n                    </p>\n                </div>\n                <div class=\"grid md:grid-cols-3 gap-8\">\n                    <!-- Launch Package -->\n                    <div class=\"bg-white rounded-xl shadow-lg p-8 card-hover\">\n                        <div class=\"text-center mb-6\">\n                            <h3 class=\"text-2xl font-bold text-gray-900 mb-2\">Launch</h3>\n                            <div class=\"text-4xl font-bold text-blue-600 mb-2\">$15,000</div>\n                            <div class=\"text-gray-500\">≈ ₹1,245,000</div>\n                        </div>\n                        <ul class=\"space-y-3 mb-8\">\n                            <li class=\"flex items-center\">\n                                <svg class=\"w-5 h-5 text-green-500 mr-3\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                                    <path fill-rule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clip-rule=\"evenodd\"></path>\n                                </svg>\n                                AI-accelerated MVP development\n                            </li>\n                            <li class=\"flex items-center\">\n                                <svg class=\"w-5 h-5 text-green-500 mr-3\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                                    <path fill-rule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clip-rule=\"evenodd\"></path>\n                                </svg>\n                                3-month post-launch support\n                            </li>\n                            <li class=\"flex items-center\">\n                                <svg class=\"w-5 h-5 text-green-500 mr-3\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                                    <path fill-rule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clip-rule=\"evenodd\"></path>\n                                </svg>\n                                Go-to-market strategy\n                            </li>\n                        </ul>\n                        <button class=\"w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors\">\n                            Start Your Launch\n                        </button>\n                    </div>\n\n                    <!-- Scale Package -->\n                    <div class=\"bg-white rounded-xl shadow-lg p-8 card-hover border-2 border-blue-500 relative\">\n                        <div class=\"absolute -top-4 left-1/2 transform -translate-x-1/2\">\n                            <span class=\"bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium\">Most Popular</span>\n                        </div>\n                        <div class=\"text-center mb-6\">\n                            <h3 class=\"text-2xl font-bold text-gray-900 mb-2\">Scale</h3>\n                            <div class=\"text-4xl font-bold text-blue-600 mb-2\">$35,000</div>\n                            <div class=\"text-gray-500\">≈ ₹2,905,000</div>\n                        </div>\n                        <ul class=\"space-y-3 mb-8\">\n                            <li class=\"flex items-center\">\n                                <svg class=\"w-5 h-5 text-green-500 mr-3\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                                    <path fill-rule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clip-rule=\"evenodd\"></path>\n                                </svg>\n                                Advanced feature development\n                            </li>\n                            <li class=\"flex items-center\">\n                                <svg class=\"w-5 h-5 text-green-500 mr-3\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                                    <path fill-rule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clip-rule=\"evenodd\"></path>\n                                </svg>\n                                6-month strategic partnership\n                            </li>\n                            <li class=\"flex items-center\">\n                                <svg class=\"w-5 h-5 text-green-500 mr-3\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                                    <path fill-rule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clip-rule=\"evenodd\"></path>\n                                </svg>\n                                Performance optimization\n                            </li>\n                        </ul>\n                        <button class=\"w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors\">\n                            Scale Your Product\n                        </button>\n                    </div>\n\n                    <!-- Growth Package -->\n                    <div class=\"bg-white rounded-xl shadow-lg p-8 card-hover\">\n                        <div class=\"text-center mb-6\">\n                            <h3 class=\"text-2xl font-bold text-gray-900 mb-2\">Growth</h3>\n                            <div class=\"text-4xl font-bold text-blue-600 mb-2\">$75,000</div>\n                            <div class=\"text-gray-500\">≈ ₹6,225,000</div>\n                        </div>\n                        <ul class=\"space-y-3 mb-8\">\n                            <li class=\"flex items-center\">\n                                <svg class=\"w-5 h-5 text-green-500 mr-3\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                                    <path fill-rule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clip-rule=\"evenodd\"></path>\n                                </svg>\n                                Conversion optimization\n                            </li>\n                            <li class=\"flex items-center\">\n                                <svg class=\"w-5 h-5 text-green-500 mr-3\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                                    <path fill-rule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clip-rule=\"evenodd\"></path>\n                                </svg>\n                                12-month strategic partnership\n                            </li>\n                            <li class=\"flex items-center\">\n                                <svg class=\"w-5 h-5 text-green-500 mr-3\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                                    <path fill-rule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clip-rule=\"evenodd\"></path>\n                                </svg>\n                                Executive coaching\n                            </li>\n                        </ul>\n                        <button class=\"w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors\">\n                            Accelerate Growth\n                        </button>\n                    </div>\n                </div>\n            </div>\n        </section>\n\n        <!-- CTA Section -->\n        <section class=\"py-20 bg-blue-600 text-white\">\n            <div class=\"max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8\">\n                <h2 class=\"text-3xl md:text-4xl font-bold mb-6\">Ready to Transform Your Startup?</h2>\n                <p class=\"text-xl mb-8 text-blue-100\">\n                    Join 50+ successful startups who've accelerated their growth with our AI-powered development approach.\n                </p>\n                <div class=\"flex flex-col sm:flex-row gap-4 justify-center\">\n                    <button class=\"bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors\">\n                        Book Discovery Call\n                    </button>\n                    <button class=\"border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition-colors\">\n                        View Case Studies\n                    </button>\n                </div>\n                <p class=\"text-sm text-blue-200 mt-4\">\n                    50+ startups launched • Average 3x faster time-to-market • 95% client satisfaction\n                </p>\n            </div>\n        </section>\n    </main>\n\n    <!-- Footer -->\n    <footer class=\"bg-gray-900 text-white py-12\">\n        <div class=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\n            <div class=\"grid md:grid-cols-4 gap-8\">\n                <div>\n                    <div class=\"text-2xl font-bold mb-4\">Techinium</div>\n                    <p class=\"text-gray-400\">AI-powered product studio for ambitious startups.</p>\n                </div>\n                <div>\n                    <h3 class=\"font-semibold mb-4\">Services</h3>\n                    <ul class=\"space-y-2 text-gray-400\">\n                        <li><a href=\"#\" class=\"hover:text-white\">Launch Package</a></li>\n                        <li><a href=\"#\" class=\"hover:text-white\">Scale Package</a></li>\n                        <li><a href=\"#\" class=\"hover:text-white\">Growth Package</a></li>\n                    </ul>\n                </div>\n                <div>\n                    <h3 class=\"font-semibold mb-4\">Company</h3>\n                    <ul class=\"space-y-2 text-gray-400\">\n                        <li><a href=\"#\" class=\"hover:text-white\">About</a></li>\n                        <li><a href=\"#\" class=\"hover:text-white\">Case Studies</a></li>\n                        <li><a href=\"#\" class=\"hover:text-white\">Blog</a></li>\n                    </ul>\n                </div>\n                <div>\n                    <h3 class=\"font-semibold mb-4\">Contact</h3>\n                    <ul class=\"space-y-2 text-gray-400\">\n                        <li><a href=\"#\" class=\"hover:text-white\">Book Call</a></li>\n                        <li><a href=\"#\" class=\"hover:text-white\">Get Quote</a></li>\n                        <li><a href=\"#\" class=\"hover:text-white\">Join Community</a></li>\n                    </ul>\n                </div>\n            </div>\n            <div class=\"border-t border-gray-800 mt-8 pt-8 text-center text-gray-400\">\n                <p>&copy; 2024 Techinium. All rights reserved.</p>\n            </div>\n        </div>\n    </footer>\n</body>\n</html>"
+}

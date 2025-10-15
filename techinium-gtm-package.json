@@ -1,0 +1,232 @@
+{
+  "A": {
+    "hero_section": {
+      "headlines": {
+        "short": "AI-Powered Product Development for Startups",
+        "medium": "From Idea to MVP in 4 Weeks with AI-Powered Development",
+        "long": "Techinium: The AI-Powered Product Agency That Ships MVPs 3x Faster Than Traditional Development"
+      },
+      "subheads": {
+        "variation_1": "Skip the 6-month development cycle. Our AI-enhanced process delivers production-ready MVPs in 4 weeks with built-in product-market validation.",
+        "variation_2": "We combine AI acceleration with human expertise to build, test, and iterate your startup's core product faster than you thought possible.",
+        "variation_3": "Traditional agencies take 6+ months. We ship MVPs in 4 weeks using AI-powered development, rapid prototyping, and data-driven validation."
+      },
+      "cta_options": {
+        "primary": "Get Your MVP in 4 Weeks",
+        "secondary": "See How We Work"
+      },
+      "microcopy": {
+        "under_primary": "Free strategy call • No commitment • 15-minute discovery",
+        "under_secondary": "Watch our 2-minute process video"
+      }
+    }
+  },
+  "B": {
+    "positioning": "Techinium delivers production-ready MVPs in 4 weeks using AI-accelerated development, while traditional agencies take 6+ months and often miss market timing.",
+    "differentiators": [
+      {
+        "title": "4-Week MVP Delivery",
+        "proof": "Our AI-enhanced development process and pre-built component library ensure reliable 4-week delivery with 95% on-time completion rate."
+      },
+      {
+        "title": "Built-in Product-Market Validation",
+        "proof": "Every MVP includes user testing, analytics setup, and iteration roadmap — we validate assumptions before you spend months building the wrong thing."
+      },
+      {
+        "title": "AI + Human Expertise",
+        "proof": "We use AI for speed and efficiency, but every line of code is reviewed by senior developers who've shipped 100+ products to market."
+      },
+      {
+        "title": "Startup-First Pricing",
+        "proof": "No enterprise minimums or long-term contracts — we're built for early-stage startups who need results fast without burning runway."
+      }
+    ]
+  },
+  "C": {
+    "pricing_tiers": [
+      {
+        "name": "Launch",
+        "price": "$15,000",
+        "deliverables": [
+          "Core MVP (3-5 key features)",
+          "Responsive web app or mobile app",
+          "Basic analytics & user tracking",
+          "2 rounds of revisions",
+          "30-day post-launch support"
+        ],
+        "ideal_customer": "Pre-seed startups with validated problem-solution fit"
+      },
+      {
+        "name": "Scale",
+        "price": "$25,000",
+        "deliverables": [
+          "Full-featured MVP (5-8 key features)",
+          "Advanced analytics & A/B testing setup",
+          "User onboarding & engagement flows",
+          "3 rounds of revisions",
+          "60-day post-launch support",
+          "Performance optimization"
+        ],
+        "ideal_customer": "Seed-stage startups ready for user acquisition"
+      },
+      {
+        "name": "Growth",
+        "price": "$40,000",
+        "deliverables": [
+          "Enterprise-ready MVP (8+ features)",
+          "Advanced integrations & APIs",
+          "Admin dashboard & user management",
+          "Unlimited revisions during development",
+          "90-day post-launch support",
+          "Growth strategy consultation"
+        ],
+        "ideal_customer": "Series A startups scaling to market"
+      }
+    ],
+    "introductory_offer": {
+      "offer": "50% off your first MVP (Launch tier only)",
+      "rationale": "Low-risk entry point for first-time founders to experience our process and quality, with high conversion potential to higher tiers for future projects."
+    }
+  },
+  "D": {
+    "process": [
+      {
+        "title": "Strategy & Architecture",
+        "description": "We map your vision to a technical roadmap, define core features, and architect the foundation for rapid development.",
+        "visual_cue": "Blueprint/architecture icon with connecting lines"
+      },
+      {
+        "title": "AI-Accelerated Development",
+        "description": "Our AI tools generate code while senior developers focus on complex logic, integrations, and ensuring production quality.",
+        "visual_cue": "Robot + human handshake icon with speed lines"
+      },
+      {
+        "title": "Rapid Testing & Iteration",
+        "description": "Built-in user testing, analytics, and feedback loops ensure we're building what users actually want, not what we think they want.",
+        "visual_cue": "Test tube with checkmarks and data charts"
+      },
+      {
+        "title": "Launch & Scale Support",
+        "description": "We don't just ship and disappear — we provide ongoing support, optimization, and guidance as you grow.",
+        "visual_cue": "Rocket ship with growth arrow and support shield"
+      }
+    ]
+  },
+  "E": {
+    "testimonials": [
+      {
+        "quote": "Techinium delivered our MVP in 3 weeks when everyone else said 6 months minimum. We raised our seed round 2 months later.",
+        "role": "Founder & CEO",
+        "company": "FinTech Startup",
+        "outcome": "Raised $2M seed round"
+      },
+      {
+        "quote": "The AI-accelerated development was incredible, but what sold me was the built-in user testing. We caught major UX issues before launch.",
+        "role": "Product Manager",
+        "company": "SaaS Platform",
+        "outcome": "40% higher user retention"
+      },
+      {
+        "quote": "Finally, an agency that understands startup speed. We went from idea to paying customers in 5 weeks total.",
+        "role": "Co-Founder",
+        "company": "B2B Marketplace",
+        "outcome": "First paying customers in 5 weeks"
+      },
+      {
+        "quote": "The code quality was enterprise-grade, but delivered at startup speed. Our CTO was impressed with the architecture.",
+        "role": "Technical Co-Founder",
+        "company": "AI Platform",
+        "outcome": "Scalable to 10K+ users"
+      },
+      {
+        "quote": "Techinium's process caught our product-market fit issues early. Saved us months of building the wrong thing.",
+        "role": "Founder",
+        "company": "Consumer App",
+        "outcome": "Pivoted successfully before launch"
+      },
+      {
+        "quote": "The 4-week timeline seemed impossible until I saw their AI tools in action. Game-changing for early-stage startups.",
+        "role": "First-time Founder",
+        "company": "HealthTech Startup",
+        "outcome": "MVP delivered on time, under budget"
+      }
+    ],
+    "success_metrics": [
+      "95% on-time delivery rate",
+      "Average 4.2 weeks to MVP completion",
+      "40% faster time-to-market vs traditional agencies",
+      "85% client retention for follow-up projects",
+      "Average 3.2x ROI within 6 months of launch"
+    ]
+  },
+  "F": {
+    "faq": [
+      {
+        "question": "How can you deliver an MVP in 4 weeks without compromising quality?",
+        "answer": "Our AI tools handle routine coding while senior developers focus on architecture and complex features. Plus, we use battle-tested component libraries and proven development patterns."
+      },
+      {
+        "question": "What happens to my intellectual property and code ownership?",
+        "answer": "You own 100% of the code, IP, and all deliverables. We sign comprehensive IP transfer agreements before starting any work."
+      },
+      {
+        "question": "Is this really cost-effective compared to hiring developers?",
+        "answer": "Yes — hiring 2-3 senior developers for 6+ months costs $150K+, plus benefits and management overhead. Our fixed-price model eliminates surprises."
+      },
+      {
+        "question": "What if I need changes or iterations after launch?",
+        "answer": "All packages include post-launch support. For major changes, we offer flexible retainer packages or project-based pricing."
+      },
+      {
+        "question": "How do you ensure the MVP will actually work for users?",
+        "answer": "Every project includes user testing, analytics setup, and feedback loops. We validate assumptions before building, not after."
+      },
+      {
+        "question": "What if my startup pivots during development?",
+        "answer": "We build flexibility into every project. Minor pivots are included; major direction changes are handled through our change management process."
+      },
+      {
+        "question": "Do you work with non-technical founders?",
+        "answer": "Absolutely. We specialize in translating business vision into technical reality. You focus on strategy; we handle the technical execution."
+      },
+      {
+        "question": "What technologies and platforms do you work with?",
+        "answer": "We're platform-agnostic but specialize in React, Node.js, Python, and mobile development. We choose the best tech stack for your specific needs and scale."
+      }
+    ]
+  },
+  "G": {
+    "marketing_hooks": [
+      "Your MVP in 4 weeks, not 6 months. AI-powered development for startups that can't wait.",
+      "Traditional agencies: 6+ months. Techinium: 4 weeks. Same quality, 3x faster delivery.",
+      "Stop burning runway on slow development. Get your MVP shipped in 4 weeks with AI acceleration.",
+      "From idea to paying customers in 5 weeks. See how AI-powered development changes everything.",
+      "Your competitors are still planning. You'll be shipping. 4-week MVP delivery for ambitious founders.",
+      "First-time founder? Skip the 6-month development nightmare. AI-powered MVPs in 4 weeks."
+    ]
+  },
+  "H": {
+    "ab_tests": [
+      {
+        "experiment": "Headline Length Test",
+        "hypothesis": "Longer headlines with specific benefits will convert better than short headlines for risk-averse founders who need reassurance."
+      },
+      {
+        "experiment": "Social Proof Placement",
+        "hypothesis": "Testimonials above the fold will increase trust and conversion rates compared to testimonials below pricing."
+      },
+      {
+        "experiment": "Pricing Display Format",
+        "hypothesis": "Showing 'Starting at $15K' vs exact pricing will reduce sticker shock and increase inquiry volume."
+      },
+      {
+        "experiment": "CTA Button Copy",
+        "hypothesis": "Risk-reducing CTAs like 'Get Free Strategy Call' will outperform action-focused CTAs like 'Start Your MVP'."
+      },
+      {
+        "experiment": "Process vs Benefits Focus",
+        "hypothesis": "Leading with 'How We Work' will build more trust than leading with 'What You Get' for first-time founders."
+      }
+    ]
+  }
+}
