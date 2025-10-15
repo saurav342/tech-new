@@ -30,10 +30,15 @@ const Navigation = ({ onContactClick }) => {
           <div className="flex items-center">
             <Link 
               to="/" 
-              className="text-2xl font-bold text-gray-900 hover:text-primary-600 transition-colors"
+              className="flex items-center space-x-2 text-2xl font-bold text-gray-900 hover:text-primary-600 transition-colors"
               aria-label="Techinium Home"
             >
-              Techinium
+              <img 
+                src="/assets/favicon.svg" 
+                alt="Techinium Logo" 
+                className="w-8 h-8"
+              />
+              <span>Techinium</span>
             </Link>
           </div>
 
@@ -58,13 +63,15 @@ const Navigation = ({ onContactClick }) => {
 
           {/* CTA Button */}
           <div className="flex items-center space-x-4">
-            <button
-              onClick={() => onContactClick()}
+            <a
+              href="https://cal.com/team/creme-digital/mvp-discovery"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary"
               aria-label="Book Discovery Call"
             >
               Book Discovery Call
-            </button>
+            </a>
             
             {/* Mobile menu button */}
             <button
@@ -101,15 +108,15 @@ const Navigation = ({ onContactClick }) => {
                 {item.name}
               </Link>
             ))}
-            <button
-              onClick={() => {
-                onContactClick()
-                setIsMobileMenuOpen(false)
-              }}
+            <a
+              href="https://cal.com/team/creme-digital/mvp-discovery"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
               className="w-full text-left px-3 py-2 text-base font-medium text-primary-600 hover:bg-primary-50 transition-colors"
             >
               Book Discovery Call
-            </button>
+            </a>
           </div>
         </div>
       )}

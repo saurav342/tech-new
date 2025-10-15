@@ -15,7 +15,7 @@
 
 @layer components {
   .gradient-bg {
-    background: #000000;
+    background: linear-gradient(135deg, #9ECADF 0%, #6A7DAA 50%, #E8B9B9 100%);
     position: relative;
   }
   
@@ -32,15 +32,18 @@
   }
   
   .btn-primary {
-    @apply bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors;
+    background: #6A7DAA;
+    @apply text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all;
   }
   
   .btn-secondary {
-    @apply border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors;
+    background: #9ECADF;
+    @apply text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all;
   }
   
   .btn-outline {
-    @apply border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors;
+    border: 2px solid #6A7DAA;
+    @apply text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all;
   }
   
   .section-padding {
@@ -56,7 +59,7 @@
   }
   
   .hero-text {
-    @apply text-gray-900 font-bold;
+    @apply text-white font-bold;
   }
   
   .section-title {
@@ -76,7 +79,9 @@
   }
   
   .pricing-card.featured {
-    @apply border-black border-2;
+    border: 2px solid #6A7DAA;
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
   
   .testimonial-card {
@@ -93,6 +98,50 @@
   
   .stats-label {
     @apply text-gray-600 text-lg;
+  }
+  
+  .accent-blue {
+    color: #9ECADF;
+  }
+  
+  .accent-slate {
+    color: #6A7DAA;
+  }
+  
+  .accent-pink {
+    color: #E8B9B9;
+  }
+  
+  .accent-light-pink {
+    color: #F5DCDC;
+  }
+  
+  .bg-accent-blue {
+    background-color: #9ECADF;
+  }
+  
+  .bg-accent-slate {
+    background-color: #6A7DAA;
+  }
+  
+  .bg-accent-pink {
+    background-color: #E8B9B9;
+  }
+  
+  .bg-accent-light-pink {
+    background-color: #F5DCDC;
+  }
+  
+  .text-accent-blue {
+    color: #9ECADF;
+  }
+  
+  .text-accent-slate {
+    color: #6A7DAA;
+  }
+  
+  .text-accent-pink {
+    color: #E8B9B9;
   }
 }
 

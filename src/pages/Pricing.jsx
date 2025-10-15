@@ -43,10 +43,9 @@ const Pricing = ({ onContactClick }) => {
       description: 'Perfect for pre-seed startups ready to validate their idea',
       monthlyPrice: 15000,
       annualPrice: 13500, // 10% discount
-      priceInr: 1245000,
       popular: false,
       features: [
-        'AI-accelerated MVP development (8-12 weeks)',
+        'AI-accelerated MVP development (4 weeks)',
         'User research and market validation',
         'Technical architecture and scalability planning',
         '3-month post-launch support and optimization',
@@ -73,7 +72,6 @@ const Pricing = ({ onContactClick }) => {
       description: 'Ideal for growing startups experiencing rapid user growth',
       monthlyPrice: 35000,
       annualPrice: 31500, // 10% discount
-      priceInr: 2905000,
       popular: true,
       features: [
         'Everything in Launch Package',
@@ -105,7 +103,6 @@ const Pricing = ({ onContactClick }) => {
       description: 'For Series A startups focused on sustainable expansion',
       monthlyPrice: 75000,
       annualPrice: 67500, // 10% discount
-      priceInr: 6225000,
       popular: false,
       features: [
         'Everything in Scale Package',
@@ -402,12 +399,14 @@ const Pricing = ({ onContactClick }) => {
               Still not sure which package is right for you? Let's discuss your specific needs and find the perfect solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => onContactClick()}
+              <a
+                href="https://cal.com/team/creme-digital/mvp-discovery"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition-colors"
               >
                 Book Discovery Call
-              </button>
+              </a>
               <button
                 onClick={() => onContactClick('Custom Quote')}
                 className="btn-secondary"

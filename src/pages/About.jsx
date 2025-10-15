@@ -124,12 +124,14 @@ const About = ({ onContactClick }) => {
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
               We're a team of serial entrepreneurs and technical experts who understand the challenges of building and scaling startups.
             </p>
-            <button
-              onClick={() => onContactClick()}
+            <a
+              href="https://cal.com/team/creme-digital/mvp-discovery"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition-colors"
             >
               Meet the Team
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -340,12 +342,14 @@ const About = ({ onContactClick }) => {
               Let's discuss your startup's needs and see how our experience can accelerate your growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => onContactClick()}
+              <a
+                href="https://cal.com/team/creme-digital/mvp-discovery"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition-colors"
               >
                 Book Discovery Call
-              </button>
+              </a>
               <button
                 onClick={() => onContactClick('Team Questions')}
                 className="btn-secondary"

@@ -23,7 +23,7 @@ const Footer = ({ onContactClick }) => {
     {
       title: 'Contact',
       links: [
-        { name: 'Book Call', action: () => onContactClick() },
+        { name: 'Book Call', href: 'https://cal.com/team/creme-digital/mvp-discovery' },
         { name: 'Get Quote', href: '/contact' },
         { name: 'Join Community', href: '/community' },
       ]
@@ -36,7 +36,14 @@ const Footer = ({ onContactClick }) => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-1">
-            <div className="text-2xl font-bold mb-4">Techinium</div>
+            <div className="flex items-center space-x-2 text-2xl font-bold mb-4">
+              <img 
+                src="/assets/favicon.svg" 
+                alt="Techinium Logo" 
+                className="w-8 h-8"
+              />
+              <span>Techinium</span>
+            </div>
             <p className="text-gray-400 mb-4">
               AI-powered product studio for ambitious startups.
             </p>
@@ -68,6 +75,15 @@ const Footer = ({ onContactClick }) => {
                       >
                         {link.name}
                       </button>
+                    ) : link.href.startsWith('http') ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white transition-colors"
+                      >
+                        {link.name}
+                      </a>
                     ) : (
                       <Link
                         to={link.href}

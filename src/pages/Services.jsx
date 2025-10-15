@@ -41,13 +41,12 @@ const Services = ({ onContactClick }) => {
       id: 'launch',
       name: 'Launch Package',
       price: '$15,000',
-      priceInr: '≈ ₹1,245,000',
       description: 'Perfect for pre-seed startups. Complete MVP development with AI acceleration, user research, and 3-month support.',
       icon: Rocket,
       color: 'blue',
-      timeline: '8-12 weeks',
+      timeline: '4 weeks',
       deliverables: [
-        'AI-accelerated MVP development (8-12 weeks)',
+        'AI-accelerated MVP development (4 weeks)',
         'User research and market validation',
         'Technical architecture and scalability planning',
         '3-month post-launch support and optimization',
@@ -67,7 +66,6 @@ const Services = ({ onContactClick }) => {
       id: 'scale',
       name: 'Scale Package',
       price: '$35,000',
-      priceInr: '≈ ₹2,905,000',
       description: 'Ideal for growing startups. Advanced features, performance optimization, team training, and 6-month support included.',
       icon: TrendingUp,
       color: 'green',
@@ -93,7 +91,6 @@ const Services = ({ onContactClick }) => {
       id: 'growth',
       name: 'Growth Package',
       price: '$75,000',
-      priceInr: '≈ ₹6,225,000',
       description: 'For Series A startups. Conversion optimization, growth engineering, advanced analytics, and 12-month strategic partnership.',
       icon: Target,
       color: 'purple',
@@ -119,18 +116,18 @@ const Services = ({ onContactClick }) => {
 
   const getIconColor = (color) => {
     const colors = {
-      blue: 'bg-blue-100 text-blue-600',
-      green: 'bg-green-100 text-green-600',
-      purple: 'bg-purple-100 text-purple-600'
+      blue: 'bg-accent-blue text-white',
+      green: 'bg-accent-pink text-white',
+      purple: 'bg-accent-slate text-white'
     }
     return colors[color] || colors.blue
   }
 
   const getBorderColor = (color) => {
     const colors = {
-      blue: 'border-blue-500',
-      green: 'border-green-500',
-      purple: 'border-purple-500'
+      blue: 'border-accent-blue',
+      green: 'border-accent-pink',
+      purple: 'border-accent-slate'
     }
     return colors[color] || colors.blue
   }
@@ -281,12 +278,14 @@ const Services = ({ onContactClick }) => {
               Let's discuss your startup's needs and find the perfect development package for your growth stage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => onContactClick()}
+              <a
+                href="https://cal.com/team/creme-digital/mvp-discovery"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition-colors"
               >
                 Book Discovery Call
-              </button>
+              </a>
               <button
                 onClick={() => onContactClick('Custom Quote')}
                 className="btn-secondary"

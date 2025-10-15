@@ -163,12 +163,14 @@ const CaseStudies = ({ onContactClick }) => {
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
               Real results from startups who chose Techinium to accelerate their growth and achieve their goals.
             </p>
-            <button
-              onClick={() => onContactClick()}
+            <a
+              href="https://cal.com/team/creme-digital/mvp-discovery"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition-colors"
             >
               Start Your Success Story
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -331,12 +333,14 @@ const CaseStudies = ({ onContactClick }) => {
               Join 50+ successful startups who've accelerated their growth with our AI-powered development approach.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => onContactClick()}
+              <a
+                href="https://cal.com/team/creme-digital/mvp-discovery"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition-colors"
               >
                 Start Your Project
-              </button>
+              </a>
               <button
                 onClick={() => onContactClick('Case Study Questions')}
                 className="btn-secondary"
