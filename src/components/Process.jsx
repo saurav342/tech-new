@@ -65,7 +65,7 @@ const Process = ({ onContactClick }) => {
     <section className="bg-bg-primary py-24 lg:py-32" role="region" aria-labelledby="process-heading">
       <div className="max-w-7xl mx-auto px-5 lg:px-20">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-on-scroll">
           <h2 id="process-heading" className="text-3xl md:text-4xl lg:text-h2 font-bold text-text-primary mb-6">
             How We Work
           </h2>
@@ -85,10 +85,10 @@ const Process = ({ onContactClick }) => {
           {/* Steps Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
             {steps.map((step, index) => (
-              <div key={index} className="relative">
+              <div key={index} className={`relative animate-on-scroll hover-scale`} style={{ animationDelay: `${index * 0.3}s` }}>
                 {/* Step Number & Icon */}
                 <div className="flex flex-col items-center mb-6">
-                  <div className="relative z-10 w-16 h-16 bg-bg-primary border-4 border-ui-border rounded-full flex items-center justify-center mb-4 group-hover:border-accent-primary transition-colors duration-300">
+                  <div className="relative z-10 w-16 h-16 bg-bg-primary border-4 border-ui-border rounded-full flex items-center justify-center mb-4 group-hover:border-accent-primary transition-colors duration-400 hover-scale">
                     <step.icon className="w-8 h-8 text-accent-primary" />
                   </div>
                   
@@ -130,7 +130,7 @@ const Process = ({ onContactClick }) => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-16 animate-on-scroll">
           <h3 className="text-2xl font-bold text-text-primary mb-4">
             Your all in one design partner.
           </h3>

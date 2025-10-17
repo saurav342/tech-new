@@ -63,7 +63,7 @@ const Pricing = ({ onContactClick }) => {
     <section className="bg-bg-primary py-24 lg:py-32" role="region" aria-labelledby="pricing-heading">
       <div className="max-w-7xl mx-auto px-5 lg:px-20">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-on-scroll">
           <h2 id="pricing-heading" className="text-3xl md:text-4xl lg:text-h2 font-bold text-text-primary mb-6">
             Pricing
           </h2>
@@ -77,7 +77,8 @@ const Pricing = ({ onContactClick }) => {
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className="bg-bg-primary border border-ui-border rounded-2xl p-8 shadow-card hover:shadow-soft transition-all duration-300 hover:-translate-y-2"
+              className={`bg-bg-primary border border-ui-border rounded-2xl p-8 shadow-card hover:shadow-soft transition-all duration-400 hover:-translate-y-1 animate-on-scroll hover-lift hover-glow`}
+              style={{ animationDelay: `${index * 0.3}s` }}
             >
               {/* Package Header */}
               <div className="text-center mb-8">
@@ -118,7 +119,7 @@ const Pricing = ({ onContactClick }) => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center">
+        <div className="text-center animate-on-scroll">
           <p className="text-text-secondary mb-4">
             or reach me out on WhatsApp / Telegram :3
           </p>

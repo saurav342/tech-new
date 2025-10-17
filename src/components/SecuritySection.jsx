@@ -113,10 +113,10 @@ const SecuritySection = () => {
             ))}
             
             {/* Floating Particles */}
-            <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-accent-tertiary rounded-full opacity-60 animate-pulse"></div>
-            <div className="absolute top-3/4 right-1/4 w-1.5 h-1.5 bg-accent-secondary rounded-full opacity-40 animate-pulse" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-accent-primary rounded-full opacity-50 animate-pulse" style={{ animationDelay: '2s' }}></div>
-            <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-accent-tertiary rounded-full opacity-30 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+            <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-accent-tertiary rounded-full opacity-60"></div>
+            <div className="absolute top-3/4 right-1/4 w-1.5 h-1.5 bg-accent-secondary rounded-full opacity-40"></div>
+            <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-accent-primary rounded-full opacity-50"></div>
+            <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-accent-tertiary rounded-full opacity-30"></div>
           </div>
         </div>
         

@@ -136,7 +136,7 @@ const FeatureSection = ({ onContactClick }) => {
                 {/* Bottom Status */}
                 <div className="flex justify-between items-center text-sm">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                     <span className="text-text-secondary">All systems operational</span>
                   </div>
                   <div className="text-text-tertiary">Last updated: 2 min ago</div>

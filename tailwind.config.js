@@ -19,9 +19,10 @@ export default {
         'text-tertiary': '#9CA3AF',
         'text-accent': '#F76B1C',
         
-        'accent-primary': '#F76B1C',
-        'accent-secondary': '#FF8C42',
+        'accent-primary': '#FF6B35',
+        'accent-secondary': '#FF8E53',
         'accent-tertiary': '#FFB366',
+        'accent-quaternary': '#FF9A8B',
         'ui-border': '#E6E9EE',
         
         // Vibrant color palette
@@ -61,14 +62,16 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Clash Display', 'Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'h1': ['3.5rem', { lineHeight: '1.1' }],
-        'h2': ['2.25rem', { lineHeight: '1.2' }],
-        'h3': ['1.5rem', { lineHeight: '1.3' }],
-        'h4': ['1.25rem', { lineHeight: '1.4' }],
+        'h1': ['4rem', { lineHeight: '1.1', letterSpacing: '-0.025em' }],
+        'h2': ['2.5rem', { lineHeight: '1.2', letterSpacing: '-0.025em' }],
+        'h3': ['1.75rem', { lineHeight: '1.3' }],
+        'h4': ['1.375rem', { lineHeight: '1.4' }],
         'h5': ['1.125rem', { lineHeight: '1.5' }],
         'h6': ['1rem', { lineHeight: '1.5' }],
+        'display': ['5rem', { lineHeight: '1.05', letterSpacing: '-0.025em' }],
       },
       spacing: {
         '18': '4.5rem',
@@ -84,6 +87,10 @@ export default {
         'pulse-slow': 'pulse 3s infinite',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
+        'shimmer': 'shimmer 3s ease-in-out infinite',
+        'gradient-wave': 'gradientWave 4s ease-in-out infinite',
+        'scale-hover': 'scaleHover 0.3s ease-out',
+        'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
       },
       keyframes: {
         fadeInUp: {
@@ -114,22 +121,56 @@ export default {
         },
         glow: {
           '0%': {
-            boxShadow: '0 0 20px rgba(247, 107, 28, 0.3)',
+            boxShadow: '0 0 20px rgba(255, 107, 53, 0.3)',
           },
           '100%': {
-            boxShadow: '0 0 30px rgba(247, 107, 28, 0.6)',
+            boxShadow: '0 0 30px rgba(255, 107, 53, 0.6)',
+          },
+        },
+        shimmer: {
+          '0%': {
+            backgroundPosition: '-200% 0',
+          },
+          '100%': {
+            backgroundPosition: '200% 0',
+          },
+        },
+        gradientWave: {
+          '0%, 100%': {
+            backgroundPosition: '0% 50%',
+          },
+          '50%': {
+            backgroundPosition: '100% 50%',
+          },
+        },
+        scaleHover: {
+          '0%': {
+            transform: 'scale(1)',
+          },
+          '100%': {
+            transform: 'scale(1.05)',
+          },
+        },
+        bounceSubtle: {
+          '0%, 100%': {
+            transform: 'translateY(0)',
+          },
+          '50%': {
+            transform: 'translateY(-5px)',
           },
         },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'accent-gradient': 'linear-gradient(135deg, #F76B1C 0%, #FFF8BE 100%)',
-        'orange-yellow': 'linear-gradient(135deg, #F76B1C 0%, #FFF8BE 100%)',
-        'soft-orange': 'linear-gradient(135deg, #FF8C42 0%, #FFB366 100%)',
+        'accent-gradient': 'linear-gradient(135deg, #FF6B35 0%, #FF9A8B 50%, #FFB3BA 100%)',
+        'accent-gradient-soft': 'linear-gradient(135deg, #FF8E53 0%, #FFB3BA 100%)',
+        'orange-peach': 'linear-gradient(135deg, #FF6B35 0%, #FF9A8B 100%)',
+        'soft-orange': 'linear-gradient(135deg, #FF8E53 0%, #FFB366 100%)',
         'light-orange': 'linear-gradient(135deg, #FFB366 0%, #FFD93D 100%)',
         'warm-yellow': 'linear-gradient(135deg, #FFD93D 0%, #FFF8BE 100%)',
         'subtle': 'linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%)',
+        'glassmorphism': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
       },
       boxShadow: {
         'soft': '0 8px 24px rgba(16, 24, 40, 0.06)',

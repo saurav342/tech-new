@@ -18,12 +18,14 @@ export const theme = {
       accent: '#F76B1C',       // Rich reddish-orange accent
     },
     
-    // Accent Gradient Colors
+    // Accent Gradient Colors - Modern Orange to Peach/Pink
     accent: {
-      primary: '#F76B1C',      // Rich reddish-orange
-      secondary: '#FF8C42',    // Orange
+      primary: '#FF6B35',      // Modern orange
+      secondary: '#FF8E53',    // Soft orange
       tertiary: '#FFB366',     // Light orange
-      gradient: 'linear-gradient(135deg, #F76B1C 0%, #FFF8BE 100%)',
+      quaternary: '#FF9A8B',   // Peach
+      gradient: 'linear-gradient(135deg, #FF6B35 0%, #FF9A8B 50%, #FFB3BA 100%)',
+      gradientSoft: 'linear-gradient(135deg, #FF8E53 0%, #FFB3BA 100%)',
     },
     
     // UI Colors
@@ -48,19 +50,21 @@ export const theme = {
   typography: {
     fontFamily: {
       primary: ['Inter', 'system-ui', 'sans-serif'],
+      display: ['Clash Display', 'Inter', 'system-ui', 'sans-serif'],
       fallback: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
     },
     
     fontSize: {
-      h1: '3.5rem',      // 56px
-      h2: '2.25rem',     // 36px
-      h3: '1.5rem',      // 24px
-      h4: '1.25rem',     // 20px
+      h1: '4rem',        // 64px - More confident
+      h2: '2.5rem',      // 40px
+      h3: '1.75rem',     // 28px
+      h4: '1.375rem',    // 22px
       h5: '1.125rem',    // 18px
       h6: '1rem',        // 16px
       body: '1rem',      // 16px
       small: '0.875rem', // 14px
       button: '1rem',    // 16px
+      display: '5rem',   // 80px - For hero headlines
     },
     
     fontWeight: {
@@ -76,6 +80,13 @@ export const theme = {
       tight: '1.1',
       normal: '1.5',
       relaxed: '1.75',
+    },
+    
+    letterSpacing: {
+      tight: '-0.025em',
+      normal: '0',
+      wide: '0.025em',
+      wider: '0.05em',
     }
   },
   

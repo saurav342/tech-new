@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import TechiniumLogo from './TechiniumLogo'
@@ -19,7 +19,17 @@ import TechiniumLogo from './TechiniumLogo'
  */
 const Navigation = ({ onContactClick }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const navigationItems = [
     { name: 'Our Services', href: '#services' },
@@ -37,7 +47,9 @@ const Navigation = ({ onContactClick }) => {
   }
 
   return (
-    <nav className="bg-bg-primary/95 backdrop-blur-sm border-b border-ui-border sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+    <nav className={`bg-bg-primary/95 backdrop-blur-md border-b border-ui-border sticky top-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'shadow-lg shadow-black/5' : ''
+    }`} role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-5 lg:px-20">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -59,13 +71,16 @@ const Navigation = ({ onContactClick }) => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-3 py-2 text-sm font-medium transition-colors ${
+                  className={`px-3 py-2 text-sm font-medium transition-all duration-300 relative group ${
                     isActive(item.href)
-                      ? 'text-accent-primary border-b-2 border-accent-primary'
+                      ? 'text-accent-primary'
                       : 'text-text-secondary hover:text-text-primary'
                   }`}
                 >
                   {item.name}
+                  <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-accent-gradient transition-all duration-300 ${
+                    isActive(item.href) ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                  }`}></span>
                 </Link>
               ))}
             </div>
@@ -75,10 +90,11 @@ const Navigation = ({ onContactClick }) => {
           <div className="flex items-center space-x-4">
             <button
               onClick={() => onContactClick && onContactClick()}
-              className="bg-accent-gradient text-white text-sm px-6 py-3 rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-0.5"
+              className="bg-accent-gradient text-white text-sm px-6 py-3 rounded-2xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 backdrop-blur-sm relative overflow-hidden group"
               aria-label="Book a 15-minute call"
             >
-              Got an idea?
+              <span className="relative z-10">Got an idea?</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             </button>
             
             {/* Mobile menu button */}

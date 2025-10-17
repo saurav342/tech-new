@@ -43,7 +43,7 @@ const Services = ({ onContactClick }) => {
     <section className="bg-bg-secondary py-24 lg:py-32" role="region" aria-labelledby="services-heading">
       <div className="max-w-7xl mx-auto px-5 lg:px-20">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-on-scroll">
           <h2 id="services-heading" className="text-3xl md:text-4xl lg:text-h2 font-bold text-text-primary mb-6">
             Designs That Drive Results
           </h2>
@@ -57,10 +57,11 @@ const Services = ({ onContactClick }) => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-bg-primary rounded-2xl p-8 shadow-card hover:shadow-soft transition-all duration-300 hover:-translate-y-2 group"
+              className={`bg-bg-primary rounded-2xl p-8 shadow-card hover:shadow-soft transition-all duration-400 hover:-translate-y-1 group animate-on-scroll hover-lift`}
+              style={{ animationDelay: `${index * 0.3}s` }}
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-accent-gradient rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-accent-gradient rounded-2xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-400">
                 <service.icon className="w-8 h-8 text-white" />
               </div>
 
@@ -92,11 +93,11 @@ const Services = ({ onContactClick }) => {
 
         {/* Stats Section */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-bg-primary rounded-2xl p-8 shadow-card text-center">
+          <div className="bg-bg-primary rounded-2xl p-8 shadow-card text-center animate-on-scroll hover-scale">
             <div className="text-4xl font-bold text-accent-primary mb-2">+80%</div>
             <div className="text-text-secondary">User Retention</div>
           </div>
-          <div className="bg-bg-primary rounded-2xl p-8 shadow-card text-center">
+          <div className="bg-bg-primary rounded-2xl p-8 shadow-card text-center animate-on-scroll hover-scale" style={{ animationDelay: '0.3s' }}>
             <div className="text-4xl font-bold text-accent-primary mb-2">+150%</div>
             <div className="text-text-secondary">Leads</div>
           </div>
