@@ -1,228 +1,315 @@
-# Techinium - AI-Powered Product Studio for Startups
+# Lightweight Agency Homepage
 
-A modern, conversion-focused marketing website built with React and Vite, showcasing Techinium's AI-powered product development services for startups.
+A premium, airy, conversion-first homepage for a product & design studio inspired by Skale, but with a bright/light aesthetic. Built with React, Vite, and Tailwind CSS.
 
-## 🚀 Features
+## 🎨 Design System
 
-- **Modern React Architecture**: Built with React 18, Vite, and modern JavaScript
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Conversion Optimized**: Strategic CTAs, social proof, and lead capture forms
-- **Accessibility**: WCAG 2.1 AA compliant with semantic HTML and ARIA labels
-- **Performance**: Optimized for Core Web Vitals and fast loading
-- **SEO Ready**: Meta tags, structured data, and semantic markup
-- **Analytics**: Google Tag Manager integration for tracking
+### Color Palette (Light Theme)
+- **Background**: `#FFFFFF` (primary), `#F8FAFC` (section surface)
+- **Text**: `#0F172A` (primary), `#6B7280` (muted)
+- **Accent**: `#60A5FA` → `#7C3AED` (blue to lavender gradient)
+- **UI Border**: `#E6E9EE`
 
-## 📁 Project Structure
+### Typography Scale
+- **H1**: 56px (desktop), 36px (mobile)
+- **H2**: 36px (desktop), 28px (mobile)
+- **H3**: 24px (desktop), 20px (mobile)
+- **Body**: 16px
+- **Small**: 14px
 
-```
-src/
-├── components/          # Reusable UI components
-│   ├── Navigation.jsx   # Main navigation with mobile menu
-│   ├── Footer.jsx       # Site footer with links
-│   └── ContactModal.jsx # Lead capture modal
-├── pages/               # Page components
-│   ├── Home.jsx         # Landing page with hero and sections
-│   ├── Services.jsx     # Detailed service packages
-│   ├── Process.jsx      # 4-step development process
-│   ├── Pricing.jsx      # Pricing tiers and comparison
-│   ├── CaseStudies.jsx  # Success stories and testimonials
-│   ├── About.jsx        # Team and company information
-│   └── Contact.jsx      # Contact form and information
-├── App.jsx              # Main app component with routing
-├── main.jsx             # App entry point
-└── index.css            # Global styles and Tailwind imports
-```
+### Spacing & Layout
+- **Grid**: 12-column, 40px gutters, 80px page margins
+- **Border Radius**: 16px (cards), 12px (buttons)
+- **Shadows**: Soft, low-contrast (`0 8px 24px rgba(16,24,40,0.06)`)
 
-## 🛠️ Tech Stack
-
-- **Frontend**: React 18, Vite
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Routing**: React Router DOM
-- **Fonts**: Inter (Google Fonts)
-- **Analytics**: Google Tag Manager
-
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
-
 - Node.js 16+ 
 - npm or yarn
 
 ### Installation
 
-1. Clone the repository:
 ```bash
+# Clone the repository
 git clone <repository-url>
-cd techinium-website
-```
+cd flycode
 
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-```
 
-3. Start the development server:
-```bash
+# Start development server
 npm run dev
-```
 
-4. Open your browser and visit `http://localhost:3000`
-
-### Build for Production
-
-```bash
+# Build for production
 npm run build
+
+# Preview production build
+npm run preview
 ```
 
-The built files will be in the `dist` directory.
+## 📁 Project Structure
 
-## 📱 Pages Overview
+```
+src/
+├── components/          # React components
+│   ├── Hero.jsx        # Hero section with left content, right visual
+│   ├── Navigation.jsx  # Sticky header with navigation
+│   ├── Services.jsx    # 3 horizontal service cards
+│   ├── Process.jsx     # 4-step timeline
+│   ├── CaseStudies.jsx # Alternating layout case studies
+│   ├── Testimonials.jsx # Client testimonials grid
+│   ├── FAQ.jsx         # Accordion FAQ section
+│   └── Footer.jsx      # Footer with links and legal
+├── data/               # Sample data files
+│   ├── services.ts     # Service definitions
+│   ├── caseStudies.ts  # Case study data
+│   ├── testimonials.ts # Testimonial data
+│   └── faq.ts          # FAQ data
+├── tokens/             # Design system tokens
+│   └── theme.ts        # Color, typography, spacing tokens
+├── pages/              # Page components
+│   └── Home.jsx        # Main homepage
+└── App.jsx             # Main app component
+```
 
-### Home Page
-- Hero section with compelling value proposition
-- Social proof metrics
-- Value proposition cards
-- 4-step process overview
-- Pricing summary
-- Testimonials
-- Strong CTAs throughout
+## 🎯 Key Sections
 
-### Services Page
-- Detailed package breakdowns (Launch, Scale, Growth)
-- Feature comparisons
-- Process overview
-- Package-specific CTAs
+### 1. Header (Navigation)
+- Sticky navigation with logo, center nav, right CTA
+- "Book a Call" primary CTA button
+- Mobile-responsive hamburger menu
 
-### Process Page
-- Detailed 4-step methodology
-- Timeline visualization
-- Benefits and outcomes
-- Interactive elements
+### 2. Hero Section
+- Left content (6 columns): headline, subhead, CTAs
+- Right visual (6 columns): product mockup with abstract shapes
+- Primary CTA: "Book a 15-min Call"
+- Secondary CTA: "See our Work"
 
-### Pricing Page
-- Transparent pricing tiers
-- Feature comparison table
-- FAQ section
-- Billing toggle (monthly/annual)
+### 3. Services Section
+- 3 horizontal cards: Product Design, Engineering, Landing Pages
+- Each card includes: icon, title, description, features list, CTA
+- Hover animations and soft shadows
 
-### Case Studies Page
-- Detailed success stories
-- Client testimonials
-- Metrics and outcomes
-- Industry examples
+### 4. Process Section
+- 4-step horizontal timeline: Discovery, Design, Development, Launch
+- Each step includes: icon, title, description, details list
+- Connected timeline with step numbers
 
-### About Page
-- Company story and mission
-- Team member profiles
-- Company values
-- Timeline and milestones
+### 5. Case Studies Section
+- Two wide cards with alternating layout
+- Left/right image placement with content on opposite side
+- Success metrics with badges (e.g., "+120% conversion", "2× faster launch")
+- Key results and project details
 
-### Contact Page
-- Multiple contact methods
-- Detailed project form
-- FAQ section
-- Quick response promise
+### 6. Testimonials Section
+- 3-column grid of client testimonials
+- Star ratings, quotes, client info
+- Stats section with key metrics
 
-## 🎨 Design System
+### 7. FAQ Section
+- Accordion-style with 4 items
+- Smooth expand/collapse animations
+- Accessible keyboard navigation
 
-### Colors
-- Primary: Blue (#3B82F6)
-- Secondary: Gray (#64748B)
-- Accent: Yellow (#FCD34D)
-- Success: Green (#10B981)
-- Warning: Purple (#8B5CF6)
+### 8. Footer
+- Logo, tagline, and social links
+- 4 columns: Company, Services, Resources, Legal
+- Bottom bar with copyright
 
-### Typography
-- Font Family: Inter
-- Scale: 4px baseline grid
-- Responsive sizing
+## 🛠 Customization
 
-### Components
-- Consistent spacing (24px gutters)
-- Card hover effects
-- Smooth transitions
-- Focus states for accessibility
+### Updating Content
 
-## 📊 Analytics & Tracking
+#### Services
+Edit `src/data/services.ts` to modify service offerings:
+```typescript
+export const services: Service[] = [
+  {
+    id: 1,
+    icon: 'Palette',
+    title: 'Your Service',
+    description: 'Service description...',
+    features: ['Feature 1', 'Feature 2'],
+    cta: 'Your CTA Text'
+  }
+]
+```
 
-### Google Tag Manager Events
-- `contact_submitted` - Form submissions
-- `book_call` - Call booking clicks
-- `pricing_click` - Pricing page visits
-- `video_play` - Video interactions
+#### Case Studies
+Update `src/data/caseStudies.ts` with your project data:
+```typescript
+export const caseStudies: CaseStudy[] = [
+  {
+    id: 1,
+    title: 'Your Project',
+    client: 'Client Name',
+    description: 'Project description...',
+    metrics: [
+      { label: 'Metric', value: '+100%', icon: 'TrendingUp' }
+    ],
+    results: ['Result 1', 'Result 2'],
+    layout: 'left'
+  }
+]
+```
 
-### Conversion Tracking
-- Lead capture forms
-- CTA button clicks
-- Package selection
-- Contact method usage
+#### Testimonials
+Modify `src/data/testimonials.ts` with client feedback:
+```typescript
+export const testimonials: Testimonial[] = [
+  {
+    id: 1,
+    name: 'Client Name',
+    title: 'Title',
+    company: 'Company',
+    rating: 5,
+    quote: 'Testimonial text...'
+  }
+]
+```
+
+### Updating Colors
+
+Edit `src/tokens/theme.ts` to customize the color palette:
+```typescript
+export const theme = {
+  colors: {
+    background: {
+      primary: '#FFFFFF',    // Main background
+      secondary: '#F8FAFC',  // Section backgrounds
+    },
+    text: {
+      primary: '#0F172A',    // Main text
+      secondary: '#6B7280',  // Muted text
+    },
+    accent: {
+      primary: '#60A5FA',    // Blue
+      secondary: '#7C3AED',  // Lavender
+    }
+  }
+}
+```
+
+### Updating Tailwind Config
+
+Modify `tailwind.config.js` to add custom utilities:
+```javascript
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        'bg-primary': '#FFFFFF',
+        'text-primary': '#0F172A',
+        // Add your custom colors
+      }
+    }
+  }
+}
+```
+
+## 🖼 Image Assets
+
+### Placeholder Images
+The project uses placeholder images for:
+- Case study screenshots (`/api/placeholder/600/400`)
+- Client avatars (`/api/placeholder/80/80`)
+
+### Replacing Images
+1. Add your images to the `public/` directory
+2. Update image paths in the data files
+3. For case studies, use 600x400px images
+4. For avatars, use 80x80px images
 
 ## ♿ Accessibility Features
 
 - Semantic HTML structure
 - ARIA labels and roles
 - Keyboard navigation support
-- Focus indicators
-- Color contrast compliance (WCAG 2.1 AA)
+- Focus management
 - Screen reader compatibility
-- Alt text for images
+- Color contrast compliance (WCAG AA)
 
-## 🔧 Customization
+## 📱 Responsive Design
 
-### Adding New Pages
-1. Create component in `src/pages/`
-2. Add route in `src/App.jsx`
-3. Update navigation in `src/components/Navigation.jsx`
+- **Desktop**: 1440px width, 12-column grid
+- **Tablet**: 1024px width, adapted layout
+- **Mobile**: 375px width, single column
 
-### Modifying Styles
-- Global styles: `src/index.css`
-- Component styles: Use Tailwind classes
-- Custom CSS: Add to `@layer components` in `index.css`
+### Breakpoints
+- `sm`: 640px
+- `md`: 768px  
+- `lg`: 1024px
+- `xl`: 1280px
+- `2xl`: 1536px
 
-### Updating Content
-- Package details: Update arrays in page components
-- Pricing: Modify pricing objects in components
-- Team info: Update team array in About page
+## 🎭 Animations
 
-## 📈 Performance Optimization
+- Fade-in-up animations on scroll
+- Hover effects on cards and buttons
+- Smooth transitions (300ms duration)
+- Intersection Observer for scroll-triggered animations
 
-- Lazy loading for images
-- Code splitting with React Router
-- Optimized bundle size with Vite
-- CSS purging with Tailwind
-- Minimal JavaScript footprint
+## 🔧 Development
+
+### Available Scripts
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run preview  # Preview production build
+npm run lint     # Run ESLint
+```
+
+### Code Style
+- Use functional components with hooks
+- Prefer Tailwind utility classes
+- Include TypeScript interfaces for data
+- Add comprehensive comments
+- Follow accessibility best practices
+
+## 📦 Dependencies
+
+### Core
+- React 18.2.0
+- React Router DOM 6.8.1
+- Vite 4.4.5
+
+### UI & Icons
+- Tailwind CSS 3.3.3
+- Lucide React 0.263.1
+
+### Development
+- ESLint
+- PostCSS
+- Autoprefixer
 
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
-1. Connect your GitHub repository
-2. Set build command: `npm run build`
-3. Set output directory: `dist`
-4. Deploy
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect Vite configuration
+3. Deploy with zero configuration
 
 ### Netlify
-1. Connect repository
-2. Build command: `npm run build`
-3. Publish directory: `dist`
+1. Build the project: `npm run build`
+2. Deploy the `dist/` folder to Netlify
+3. Configure redirects for SPA routing
 
-### Traditional Hosting
-1. Run `npm run build`
-2. Upload `dist` folder contents to your server
-3. Configure server for SPA routing
+### Other Platforms
+The built files in `dist/` can be deployed to any static hosting service.
 
 ## 📞 Support
 
-For questions or support, contact:
-- Email: hello@techinium.com
-- Website: https://techinium.com
+For questions or issues:
+1. Check the component comments for usage examples
+2. Review the data files for content structure
+3. Consult the Tailwind CSS documentation for styling
+4. Test accessibility with screen readers and keyboard navigation
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
-Built with ❤️ by the Techinium team
-# tech-new
-
+**Built with ❤️ for modern startups and SaaS teams**

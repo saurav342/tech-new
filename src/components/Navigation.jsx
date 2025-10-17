@@ -1,17 +1,31 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import TechiniumLogo from './TechiniumLogo'
 
+/**
+ * Header/Navigation Component - Light Agency Theme
+ * 
+ * Features:
+ * - Sticky header with light theme
+ * - Left logo, center navigation, right CTA
+ * - "Book a Call" primary CTA
+ * - Agency navigation links
+ * - Mobile responsive menu
+ * - Clean, minimal design
+ * 
+ * Props:
+ * - onContactClick: Function to handle contact modal opening
+ */
 const Navigation = ({ onContactClick }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
 
   const navigationItems = [
-    { name: 'Services', href: '/services' },
-    { name: 'Process', href: '/process' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'About', href: '/about' },
+    { name: 'Our Services', href: '#services' },
+    { name: 'Pricing', href: '#pricing' },
+    { name: 'FAQ', href: '#faq' },
+    { name: 'Case Studies', href: '#case-studies' },
   ]
 
   const toggleMobileMenu = () => {
@@ -23,21 +37,17 @@ const Navigation = ({ onContactClick }) => {
   }
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50" role="navigation" aria-label="Main navigation">
-      <div className="container-custom">
-        <div className="flex justify-between items-center h-16">
+    <nav className="bg-bg-primary/95 backdrop-blur-sm border-b border-ui-border sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+      <div className="max-w-7xl mx-auto px-5 lg:px-20">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
             <Link 
               to="/" 
-              className="flex items-center space-x-2 text-2xl font-bold text-gray-900 hover:text-primary-600 transition-colors"
-              aria-label="Techinium Home"
+              className="flex items-center space-x-3 text-2xl font-bold text-text-primary hover:text-accent-primary transition-colors"
+              aria-label="Home"
             >
-              <img 
-                src="/favicon.svg" 
-                alt="Techinium Logo" 
-                className="w-8 h-8"
-              />
+              <TechiniumLogo size={40} />
               <span>Techinium</span>
             </Link>
           </div>
@@ -51,8 +61,8 @@ const Navigation = ({ onContactClick }) => {
                   to={item.href}
                   className={`px-3 py-2 text-sm font-medium transition-colors ${
                     isActive(item.href)
-                      ? 'text-primary-600 border-b-2 border-primary-600'
-                      : 'text-gray-700 hover:text-gray-900'
+                      ? 'text-accent-primary border-b-2 border-accent-primary'
+                      : 'text-text-secondary hover:text-text-primary'
                   }`}
                 >
                   {item.name}
@@ -61,22 +71,20 @@ const Navigation = ({ onContactClick }) => {
             </div>
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <div className="flex items-center space-x-4">
-            <a
-              href="https://cal.com/techinium/15min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-              aria-label="Book Discovery Call"
+            <button
+              onClick={() => onContactClick && onContactClick()}
+              className="bg-accent-gradient text-white text-sm px-6 py-3 rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-0.5"
+              aria-label="Book a 15-minute call"
             >
-              Book Discovery Call
-            </a>
+              Got an idea?
+            </button>
             
             {/* Mobile menu button */}
             <button
               onClick={toggleMobileMenu}
-              className="md:hidden text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500 p-2"
+              className="md:hidden text-text-secondary hover:text-text-primary focus:outline-none focus:ring-2 focus:ring-accent-primary p-2"
               aria-label="Toggle mobile menu"
               aria-expanded={isMobileMenuOpen}
             >
@@ -92,31 +100,31 @@ const Navigation = ({ onContactClick }) => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t shadow-lg">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="md:hidden bg-bg-secondary border-t border-ui-border shadow-lg">
+          <div className="px-6 pt-4 pb-6 space-y-3">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`block px-3 py-2 text-base font-medium transition-colors ${
+                className={`block px-3 py-3 text-base font-medium transition-colors rounded-lg ${
                   isActive(item.href)
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
+                    ? 'text-accent-primary bg-accent-primary/10'
+                    : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <a
-              href="https://cal.com/techinium/15min"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="w-full text-left px-3 py-2 text-base font-medium text-primary-600 hover:bg-primary-50 transition-colors"
+            <button
+              onClick={() => {
+                onContactClick && onContactClick()
+                setIsMobileMenuOpen(false)
+              }}
+              className="w-full text-left px-3 py-3 text-base font-medium text-accent-primary hover:bg-bg-tertiary transition-colors rounded-lg"
             >
-              Book Discovery Call
-            </a>
+              Got an idea?
+            </button>
           </div>
         </div>
       )}

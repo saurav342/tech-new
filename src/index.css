@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,139 +11,112 @@
   
   body {
     font-family: 'Inter', system-ui, sans-serif;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
+    color: #0F172A;
+  }
+  
+  /* Custom scrollbar for light theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #F8FAFC;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #E6E9EE;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #CBD5E1;
   }
 }
 
 @layer components {
-  .gradient-bg {
-    background: linear-gradient(135deg, #9ECADF 0%, #6A7DAA 50%, #E8B9B9 100%);
+  /* Light Theme Components */
+  .hero-light-bg {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
     position: relative;
   }
   
-  .card-hover {
-    @apply transition-all duration-300 ease-out;
+  .hero-light-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(247, 107, 28, 0.05) 0%, transparent 70%);
+    pointer-events: none;
   }
   
-  .card-hover:hover {
-    @apply -translate-y-1;
+  .text-gradient-orange-yellow {
+    background: linear-gradient(135deg, #F76B1C 0%, #FFF8BE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   
-  .clean-card {
-    @apply bg-white border border-gray-200 rounded-lg;
+  .btn-light-primary {
+    @apply bg-accent-gradient text-white px-8 py-4 rounded-xl font-medium hover:shadow-soft focus:outline-none focus:ring-2 focus:ring-accent-primary transition-all duration-300 hover:-translate-y-1;
   }
   
-  .btn-primary {
-    background: #6A7DAA;
-    @apply text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all;
+  .btn-light-secondary {
+    @apply bg-transparent border-2 border-ui-border text-text-primary px-8 py-4 rounded-xl font-medium hover:border-accent-primary hover:text-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary transition-all duration-300;
   }
   
-  .btn-secondary {
-    background: #9ECADF;
-    @apply text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all;
+  .container-light {
+    @apply max-w-7xl mx-auto px-5 lg:px-20;
   }
   
-  .btn-outline {
-    border: 2px solid #6A7DAA;
-    @apply text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all;
+  .section-padding-light {
+    @apply py-24 lg:py-32;
   }
   
-  .section-padding {
-    @apply py-16 md:py-20;
+  .card-light {
+    @apply bg-bg-primary border border-ui-border rounded-2xl p-8 hover:border-accent-primary transition-all duration-300 hover:shadow-soft;
   }
   
-  .container-custom {
-    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  .stats-card-light {
+    @apply bg-bg-secondary border border-ui-border rounded-xl p-6 text-left;
   }
   
-  .text-gradient {
-    @apply text-gray-900;
+  .dashboard-card-light {
+    @apply bg-bg-primary border border-ui-border rounded-2xl p-6 shadow-soft;
   }
   
-  .hero-text {
-    @apply text-white font-bold;
+  .testimonial-card-light {
+    @apply bg-bg-secondary border border-ui-border rounded-2xl p-8 relative;
   }
   
-  .section-title {
-    @apply text-4xl md:text-5xl font-bold text-gray-900 leading-tight;
+  .testimonial-card-light.behind {
+    @apply opacity-50 transform rotate-2 scale-95;
   }
   
-  .section-subtitle {
-    @apply text-xl text-gray-600 leading-relaxed;
+  .testimonial-card-light.behind-2 {
+    @apply opacity-30 transform -rotate-1 scale-90;
   }
   
-  .feature-card {
-    @apply bg-white border border-gray-200 rounded-lg p-8 hover:border-gray-300 transition-colors;
+  .faq-item-light {
+    @apply bg-bg-primary border border-ui-border rounded-xl mb-4 overflow-hidden;
   }
   
-  .pricing-card {
-    @apply bg-white border border-gray-200 rounded-lg p-8 relative;
+  .banner-light {
+    @apply bg-bg-secondary border border-ui-border rounded-2xl p-12 text-center;
   }
   
-  .pricing-card.featured {
-    border: 2px solid #6A7DAA;
-    transform: scale(1.05);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* Utility classes for animations */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
   
-  .testimonial-card {
-    @apply bg-white border border-gray-200 rounded-lg p-8;
-  }
-  
-  .process-step {
-    @apply bg-white border border-gray-200 rounded-lg p-6;
-  }
-  
-  .stats-number {
-    @apply text-4xl md:text-5xl font-bold text-gray-900;
-  }
-  
-  .stats-label {
-    @apply text-gray-600 text-lg;
-  }
-  
-  .accent-blue {
-    color: #9ECADF;
-  }
-  
-  .accent-slate {
-    color: #6A7DAA;
-  }
-  
-  .accent-pink {
-    color: #E8B9B9;
-  }
-  
-  .accent-light-pink {
-    color: #F5DCDC;
-  }
-  
-  .bg-accent-blue {
-    background-color: #9ECADF;
-  }
-  
-  .bg-accent-slate {
-    background-color: #6A7DAA;
-  }
-  
-  .bg-accent-pink {
-    background-color: #E8B9B9;
-  }
-  
-  .bg-accent-light-pink {
-    background-color: #F5DCDC;
-  }
-  
-  .text-accent-blue {
-    color: #9ECADF;
-  }
-  
-  .text-accent-slate {
-    color: #6A7DAA;
-  }
-  
-  .text-accent-pink {
-    color: #E8B9B9;
+  .animate-on-scroll.animate-fade-in-up {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
