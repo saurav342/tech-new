@@ -92,9 +92,11 @@ const Hero = ({ onContactClick, onWorkClick }) => {
             
             {/* CTA */}
             <div className={`flex justify-center pt-4 transition-all duration-1000 ease-out ${elementsVisible.cta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-              <button
-                onClick={() => onContactClick && onContactClick()}
-                className="bg-accent-gradient text-white px-12 py-5 rounded-2xl font-medium hover:shadow-soft transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-105 flex items-center justify-center gap-3 text-lg backdrop-blur-sm relative overflow-hidden group hover-glow transform-gpu"
+              <a
+                href="https://cal.com/techinium/15min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-accent-gradient text-white px-12 py-5 rounded-2xl font-medium hover:shadow-soft transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-105 flex items-center justify-center gap-3 text-lg backdrop-blur-sm relative overflow-hidden group hover-glow transform-gpu inline-block"
                 aria-label="Book a 15-minute strategy call"
               >
                 <span className="text-xl transition-transform duration-300 group-hover:scale-110">🚀</span>
@@ -102,7 +104,7 @@ const Hero = ({ onContactClick, onWorkClick }) => {
                 <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-2 transition-transform duration-500 ease-out" />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
-              </button>
+              </a>
             </div>
           </div>
         </div>
