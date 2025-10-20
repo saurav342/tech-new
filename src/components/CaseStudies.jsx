@@ -17,37 +17,39 @@ const CaseStudies = ({ onContactClick }) => {
   const caseStudies = [
     {
       id: 1,
-      title: 'SaaS Dashboard Redesign',
-      client: 'TechFlow Inc.',
-      description: 'Complete redesign of their analytics dashboard resulting in improved user engagement and reduced support tickets.',
-      image: '/api/placeholder/600/400',
+      title: 'Malamacabs Mobility Platform',
+      client: 'Malamacabs',
+      description: 'Built an end-to-end ride hailing platform with real-time driver tracking, automated payouts, and a unified customer booking experience.',
+      image: '/screenshots/malama.png',
+      imageAlt: 'Malamacabs driver and passenger dashboards',
       metrics: [
-        { label: 'Conversion Rate', value: '+120%', icon: TrendingUp },
-        { label: 'Time to Value', value: '2× faster', icon: Clock },
-        { label: 'User Satisfaction', value: '4.8/5', icon: Users }
+        { label: 'Time to Launch', value: '6 weeks', icon: Clock },
+        { label: 'Bookings Growth', value: '+180%', icon: TrendingUp },
+        { label: 'Driver Satisfaction', value: '4.9/5', icon: Users }
       ],
       results: [
-        'Reduced onboarding time by 60%',
-        'Increased daily active users by 45%',
-        'Decreased support tickets by 30%'
+        'Launched passenger and driver apps in just 6 weeks',
+        'Increased average weekly bookings by 180% post-launch',
+        'Reduced driver payout delays from 5 days to real-time'
       ],
       layout: 'left' // Image on left, content on right
     },
     {
       id: 2,
-      title: 'E-commerce Platform Launch',
-      client: 'RetailMax',
-      description: 'Built a scalable e-commerce platform from scratch with custom features and integrations.',
-      image: '/api/placeholder/600/400',
+      title: 'Gotitli B2B Ordering Suite',
+      client: 'Gotitli',
+      description: 'Scaled a B2B procurement marketplace with real-time inventory sync, digital catalogs, and automated invoicing across vendors.',
+      image: '/screenshots/gotitli.png',
+      imageAlt: 'Gotitli B2B ordering interface',
       metrics: [
-        { label: 'Page Load Speed', value: '1.2s', icon: Clock },
-        { label: 'Mobile Conversion', value: '+85%', icon: TrendingUp },
-        { label: 'Revenue Growth', value: '+200%', icon: Users }
+        { label: 'Conversion Lift', value: '+230%', icon: TrendingUp },
+        { label: 'Order Processing', value: '3× faster', icon: Clock },
+        { label: 'Active Vendors', value: '2.5k+', icon: Users }
       ],
       results: [
-        'Launched 3 months ahead of schedule',
-        'Achieved 99.9% uptime',
-        'Scaled to handle 10x traffic growth'
+        'Migrated 45k SKUs with zero downtime',
+        'Cut manual reconciliation time by 70%',
+        'Expanded vendor network to 2.5k+ active suppliers'
       ],
       layout: 'right' // Image on right, content on left
     }
@@ -80,15 +82,12 @@ const CaseStudies = ({ onContactClick }) => {
               <div className={`${study.layout === 'right' ? 'lg:col-start-2' : ''}`}>
                 <div className="relative group">
                   <div className="aspect-[3/2] bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl shadow-soft overflow-hidden">
-                    {/* Placeholder for actual image */}
-                    <div className="w-full h-full flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-16 h-16 bg-accent-gradient rounded-2xl flex items-center justify-center mx-auto mb-4">
-                          <TrendingUp className="w-8 h-8 text-white" />
-                        </div>
-                        <p className="text-text-secondary">Project Screenshot</p>
-                      </div>
-                    </div>
+                    <img
+                      src={study.image}
+                      alt={study.imageAlt}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
                   
                   {/* Floating Elements */}
