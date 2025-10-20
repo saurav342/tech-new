@@ -55,10 +55,10 @@ const FAQ = ({ onContactClick }) => {
   }
 
   return (
-    <section className="bg-bg-secondary py-16 sm:py-20 md:py-24 lg:py-32" role="region" aria-labelledby="faq-heading">
+    <section className="bg-bg-secondary py-12 sm:py-16 md:py-20 lg:py-24" role="region" aria-labelledby="faq-heading">
       <div className="max-w-4xl mx-auto px-5 lg:px-20">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 id="faq-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
             Frequently asked questions
           </h2>
@@ -68,7 +68,7 @@ const FAQ = ({ onContactClick }) => {
         </div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-4 mb-16">
+        <div className="space-y-4 mb-12">
           {faqs.map((faq, index) => (
             <div
               key={faq.id}
@@ -113,13 +113,15 @@ const FAQ = ({ onContactClick }) => {
           <p className="text-text-secondary mb-6">
             Still have questions? We'd love to hear from you.
           </p>
-          <button
-            onClick={() => onContactClick && onContactClick()}
+          <a
+            href="https://cal.com/techinium/15min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-accent-gradient text-white px-8 py-4 rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-1"
             aria-label="Contact us with your questions"
           >
             Contact Us
-          </button>
+          </a>
         </div>
       </div>
     </section>

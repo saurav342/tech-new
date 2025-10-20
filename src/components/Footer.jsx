@@ -65,13 +65,15 @@ const Footer = ({ onContactClick }) => {
           <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
             Scale your business with ease. Over 60+ startups trusted us and increased their revenue!
           </h2>
-          <button
-            onClick={() => onContactClick && onContactClick()}
-            className="bg-accent-gradient text-white px-8 py-4 rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-1 mt-8"
+          <a
+            href="https://cal.com/techinium/15min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-accent-gradient text-white px-8 py-4 rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-1 mt-8 inline-block"
             aria-label="Book a 30-minute call"
           >
             Book a 30-min call
-          </button>
+          </a>
           <div className="mt-6">
             <p className="text-text-secondary mb-2">Social Media</p>
             <div className="flex justify-center space-x-4">
@@ -95,7 +97,7 @@ const Footer = ({ onContactClick }) => {
             <p className="text-text-secondary mb-6 leading-relaxed">
               Scale your business with ease. Over 60+ startups trusted us and increased their revenue!
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a href="#" className="text-text-tertiary hover:text-accent-primary transition-colors" aria-label="Instagram">
                 <Instagram className="w-6 h-6" />
               </a>
@@ -108,7 +110,7 @@ const Footer = ({ onContactClick }) => {
               <a href="#" className="text-text-tertiary hover:text-accent-primary transition-colors" aria-label="GitHub">
                 <Github className="w-6 h-6" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Footer Links */}

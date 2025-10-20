@@ -71,7 +71,7 @@ const Hero = ({ onContactClick, onWorkClick }) => {
         </div>
 
         <div className="max-w-7xl mx-auto px-5 lg:px-20 relative z-10">
-          <div className="text-center space-y-8">
+          <div className="text-center space-y-4">
             {/* Main Heading */}
             <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-display font-bold leading-tight text-text-primary tracking-tight transition-all duration-1000 ease-out ${elementsVisible.heading ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Idea to MVP in <span className="text-gradient-shimmer inline-block">4 weeks</span>
@@ -88,7 +88,7 @@ const Hero = ({ onContactClick, onWorkClick }) => {
             </p>
             
             {/* CTA */}
-            <div className={`flex justify-center pt-4 transition-all duration-1000 ease-out ${elementsVisible.cta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+            <div className={`flex justify-center pt-2 transition-all duration-1000 ease-out ${elementsVisible.cta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
               <a
                 href="https://cal.com/techinium/15min"
                 target="_blank"

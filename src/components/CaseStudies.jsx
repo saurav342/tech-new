@@ -54,10 +54,10 @@ const CaseStudies = ({ onContactClick }) => {
   ]
 
   return (
-    <section className="bg-bg-secondary py-16 sm:py-20 md:py-24 lg:py-32" role="region" aria-labelledby="case-studies-heading">
+    <section className="bg-bg-secondary py-12 sm:py-16 md:py-20 lg:py-24" role="region" aria-labelledby="case-studies-heading">
       <div className="max-w-7xl mx-auto px-5 lg:px-20">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 id="case-studies-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
             Case Studies
           </h2>
@@ -68,7 +68,7 @@ const CaseStudies = ({ onContactClick }) => {
         </div>
 
         {/* Case Studies */}
-        <div className="space-y-24">
+        <div className="space-y-16">
           {caseStudies.map((study, index) => (
             <div
               key={study.id}
@@ -146,14 +146,16 @@ const CaseStudies = ({ onContactClick }) => {
                   </div>
 
                   {/* CTA */}
-                  <button
-                    onClick={() => onContactClick && onContactClick()}
+                  <a
+                    href="https://cal.com/techinium/15min"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-accent-primary font-medium hover:text-accent-secondary transition-colors duration-300"
                     aria-label={`Learn more about ${study.title}`}
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -161,18 +163,20 @@ const CaseStudies = ({ onContactClick }) => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-12">
           <p className="text-text-secondary mb-6">
             Want to see more case studies or discuss your project?
           </p>
-          <button
-            onClick={() => onContactClick && onContactClick()}
+          <a
+            href="https://cal.com/techinium/15min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-accent-gradient text-white px-8 py-4 rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-1 flex items-center gap-2 mx-auto"
             aria-label="View all case studies"
           >
             View All Case Studies
             <ArrowRight className="w-5 h-5" />
-          </button>
+          </a>
         </div>
       </div>
     </section>

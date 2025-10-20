@@ -66,7 +66,7 @@ const Navigation = ({ onContactClick }) => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-8 flex items-baseline space-x-6">
               {navigationItems.map((item) => (
                 <a
                   key={item.name}
@@ -94,15 +94,17 @@ const Navigation = ({ onContactClick }) => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex items-center space-x-4">
-            <button
-              onClick={() => onContactClick && onContactClick()}
-              className="bg-accent-gradient text-white text-sm sm:text-base px-4 sm:px-6 py-3 rounded-2xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 backdrop-blur-sm relative overflow-hidden group"
+          <div className="flex items-center space-x-3">
+            <a
+              href="https://cal.com/techinium/15min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-accent-gradient text-white text-sm sm:text-base px-4 sm:px-6 py-3 rounded-2xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 backdrop-blur-sm relative overflow-hidden group inline-block"
               aria-label="Book a 15-minute call"
             >
               <span className="relative z-10">Got an idea?</span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-            </button>
+            </a>
             
             {/* Mobile menu button */}
             <button
@@ -146,15 +148,15 @@ const Navigation = ({ onContactClick }) => {
                 {item.name}
               </a>
             ))}
-            <button
-              onClick={() => {
-                onContactClick && onContactClick()
-                setIsMobileMenuOpen(false)
-              }}
-              className="w-full text-left px-3 py-3 text-base font-medium text-accent-primary hover:bg-bg-tertiary transition-colors rounded-lg"
+            <a
+              href="https://cal.com/techinium/15min"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-full text-left px-3 py-3 text-base font-medium text-accent-primary hover:bg-bg-tertiary transition-colors rounded-lg block"
             >
               Got an idea?
-            </button>
+            </a>
           </div>
         </div>
       )}

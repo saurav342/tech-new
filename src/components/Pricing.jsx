@@ -17,7 +17,7 @@ const Pricing = ({ onContactClick }) => {
   const packages = [
     {
       name: 'Landing Creation',
-      price: '$20000+',
+      price: '$1000',
       description: 'Every business needs a landing, and it\'s never been easier to get one...',
       features: [
         '2 spots available',
@@ -32,7 +32,7 @@ const Pricing = ({ onContactClick }) => {
     },
     {
       name: 'Product Design',
-      price: '$20000+',
+      price: '$4000',
       description: 'Need an MVP, a high-end dashboard or a SaaS? We\'ll help you to build all of that',
       features: [
         '1 spot available',
@@ -46,7 +46,7 @@ const Pricing = ({ onContactClick }) => {
     },
     {
       name: 'Launch Videos',
-      price: '$15000+',
+      price: '$5000',
       description: 'Launching a product or a new feature? Then you definitely need a promo sec animation',
       features: [
         '3 spots available',
@@ -60,10 +60,10 @@ const Pricing = ({ onContactClick }) => {
   ]
 
   return (
-    <section className="bg-bg-primary py-16 sm:py-20 md:py-24 lg:py-32" role="region" aria-labelledby="pricing-heading">
+    <section className="bg-bg-primary py-12 sm:py-16 md:py-20 lg:py-24" role="region" aria-labelledby="pricing-heading">
       <div className="max-w-7xl mx-auto px-5 lg:px-20">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-on-scroll">
+        <div className="text-center mb-12 animate-on-scroll">
           <h2 id="pricing-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
             Pricing
           </h2>
@@ -73,7 +73,7 @@ const Pricing = ({ onContactClick }) => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-8">
           {packages.map((pkg, index) => (
             <div
               key={index}
@@ -106,14 +106,16 @@ const Pricing = ({ onContactClick }) => {
               </ul>
 
               {/* CTA Button */}
-              <button
-                onClick={() => onContactClick && onContactClick()}
+              <a
+                href="https://cal.com/techinium/15min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full bg-accent-gradient text-white py-4 px-6 rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
                 aria-label={`${pkg.cta} for ${pkg.name}`}
               >
                 {pkg.cta}
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           ))}
         </div>

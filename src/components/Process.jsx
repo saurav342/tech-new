@@ -62,10 +62,10 @@ const Process = ({ onContactClick }) => {
   ]
 
   return (
-    <section className="bg-bg-primary py-16 sm:py-20 md:py-24 lg:py-32" role="region" aria-labelledby="process-heading">
+    <section className="bg-bg-primary py-12 sm:py-16 md:py-20 lg:py-24" role="region" aria-labelledby="process-heading">
       <div className="max-w-7xl mx-auto px-5 lg:px-20">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-on-scroll">
+        <div className="text-center mb-12 animate-on-scroll">
           <h2 id="process-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
             How We Work
           </h2>
@@ -130,7 +130,7 @@ const Process = ({ onContactClick }) => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16 animate-on-scroll">
+        <div className="text-center mt-12 animate-on-scroll">
           <h3 className="text-2xl font-bold text-text-primary mb-4">
             Your all in one design partner.
           </h3>
