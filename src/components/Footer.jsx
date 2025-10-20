@@ -74,14 +74,7 @@ const Footer = ({ onContactClick }) => {
           >
             Book a 30-min call
           </a>
-          <div className="mt-6">
-            <p className="text-text-secondary mb-2">Social Media</p>
-            <div className="flex justify-center space-x-4">
-              <a href="#" className="text-text-tertiary hover:text-accent-primary transition-colors" aria-label="Techinium">
-                <span className="text-sm">Techinium</span>
-              </a>
-            </div>
-          </div>
+          
         </div>
       </section>
 
