@@ -73,9 +73,9 @@ const Hero = ({ onContactClick, onWorkClick }) => {
         <div className="max-w-7xl mx-auto px-5 lg:px-20 relative z-10">
           <div className="text-center space-y-8">
             {/* Main Heading - Bold and Beautiful */}
-            <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-display font-bold leading-tight text-text-primary tracking-tight transition-all duration-1000 ease-out ${elementsVisible.heading ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="mb-2">Idea to MVP in</div>
-              <div className="text-gradient-shimmer">4 weeks</div>
+            <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-display font-bold leading-tight text-text-primary tracking-tight transition-all duration-1000 ease-out flex flex-nowrap items-center justify-center gap-4 ${elementsVisible.heading ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <span className="whitespace-nowrap">Idea to MVP in</span>
+              <span className="text-gradient-shimmer whitespace-nowrap">4 weeks </span>
             </h1>
             
             {/* Tagline - Clean and Simple */}
