@@ -91,6 +91,7 @@ export default {
         'gradient-wave': 'gradientWave 4s ease-in-out infinite',
         'scale-hover': 'scaleHover 0.3s ease-out',
         'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
+        'carousel': 'carousel 28s linear infinite',
       },
       keyframes: {
         fadeInUp: {
@@ -159,6 +160,14 @@ export default {
             transform: 'translateY(-5px)',
           },
         },
+        carousel: {
+          '0%': {
+            transform: 'translateX(0)',
+          },
+          '100%': {
+            transform: 'translateX(-50%)',
+          },
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -181,4 +190,3 @@ export default {
   },
   plugins: [],
 }
-

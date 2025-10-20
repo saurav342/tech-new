@@ -1,177 +1,161 @@
 import React from 'react'
-import { Star, Quote } from 'lucide-react'
 
 /**
- * Testimonials Section Component - Light Agency Theme
- * 
- * Features:
- * - Clean grid layout with portrait + quote
- * - Star ratings
- * - Responsive design
- * - Subtle animations
- * 
- * Props:
- * - onContactClick: Function to handle CTA clicks
+ * Testimonials & Case Studies Section
+ * Adapted from provided design to showcase marquee testimonials
+ * alongside supporting metrics and calls-to-action.
  */
-const Testimonials = ({ onContactClick }) => {
+const Testimonials = () => {
   const testimonials = [
     {
-      id: 1,
-      name: 'Vanja Popovic',
-      title: '',
-      company: '',
-      avatar: '/api/placeholder/80/80',
-      rating: 5,
-      quote: 'Mark\'s redesign of our landing page exceeded our expectations. His design not only encapsulated our brand essence but also met our standards for modern, user-friendly design. The visually appealing layout...',
-      metric: '+15% in Session Duration'
+      company: 'Malama EV Cabs',
+      industry: 'Electric Vehicle Services',
+      quote:
+        "Techinium's AI-powered fleet management system optimized our routes and reduced operational costs by 45%. Outstanding results!",
+      author: 'Saurav K S',
+      role: 'Founder & CEO',
+      metric: '45% cost reduction',
+      logo: '🚗'
     },
     {
-      id: 2,
-      name: 'Ya',
-      title: '',
-      company: '',
-      avatar: '/api/placeholder/80/80',
-      rating: 5,
-      quote: 'The design is very nice, my associate and I are pleased with the improvements made to our basic design. Once the work began, the delivery of the design was quite prompt!',
-      metric: '-40% Bounce Rate'
+      company: 'Krushi Vista',
+      industry: 'Agricultural Technology',
+      quote:
+        'The AI-driven crop monitoring solution increased our yield predictions accuracy by 80%. Game-changing technology for agriculture.',
+      author: 'Akash D',
+      role: 'CTO',
+      metric: '80% better accuracy',
+      logo: '🌾'
     },
     {
-      id: 3,
-      name: 'Aleksandr Lyubkin',
-      title: '',
-      company: '',
-      avatar: '/api/placeholder/80/80',
-      rating: 5,
-      quote: 'The design exceeded all my expectations - unique, modern, with creative use of space. It attracted visitors\' attention and significantly improved the conversion rate from 0.5% to 3%. The work was...',
-      metric: '6x Conversion Increase'
+      company: 'Launch & Lift',
+      industry: 'Startup Incubator',
+      quote:
+        'Their AI-accelerated development approach helped our portfolio companies go to market 60% faster. Incredible efficiency gains.',
+      author: 'Pushpamala',
+      role: 'Managing Partner',
+      metric: '60% faster launch',
+      logo: '🚀'
     },
     {
-      id: 4,
-      name: 'Anton Malyshev',
-      title: '',
-      company: '',
-      avatar: '/api/placeholder/80/80',
-      rating: 5,
-      quote: 'I had the pleasure of working with Mark and his team on building a website for my business, and I couldn\'t be more thrilled with the results. They were incredibly talented, creative, and easy to work with...',
-      metric: '+85% in User Satisfaction'
+      company: 'Saga15',
+      industry: 'Digital Marketing',
+      quote:
+        'The intelligent chatbot and automation tools boosted our client engagement by 150%. ROI exceeded all expectations.',
+      author: 'Shalini G',
+      role: 'Head of Operations',
+      metric: '150% more engagement',
+      logo: '📈'
     },
     {
-      id: 5,
-      name: 'Alexander Tsvirko',
-      title: '',
-      company: '',
-      avatar: '/api/placeholder/80/80',
-      rating: 5,
-      quote: 'The guys did the design for my website, I was very pleased!',
-      metric: '+27% Conversion Increase'
+      company: 'Adchef',
+      industry: 'Advertising Technology',
+      quote:
+        "Techinium's AI-powered ad optimization platform increased our campaign performance by 90%. Exceptional technical expertise.",
+      author: 'Rohit K A',
+      role: 'Chief Technology Officer',
+      metric: '90% better performance',
+      logo: '🎯'
     },
     {
-      id: 6,
-      name: 'Jesse Cox',
-      title: '',
-      company: '',
-      avatar: '/api/placeholder/80/80',
-      rating: 5,
-      quote: 'Mark Vassilevskiy did an outstanding job designing our website! His attention to detail, creativity, and ability to understand our vision were truly impressive. The final product not only looks stunning but also...',
-      metric: '+2 Angel Investors'
+      company: 'A to Z AI',
+      industry: 'Artificial Intelligence',
+      quote:
+        'Their AI agent deployment framework accelerated our product development by 8 months. Truly innovative solutions.',
+      author: 'Dr. Emily Watson',
+      role: 'Founder & CEO',
+      metric: '8 months faster',
+      logo: '🤖'
+    },
+    {
+      company: 'Modern Concept',
+      industry: 'Design & Technology',
+      quote:
+        'The AI-enhanced UI/UX tools and automated testing reduced our design iteration time by 70%. Outstanding collaboration.',
+      author: 'Alex Johnson',
+      role: 'Creative Director',
+      metric: '70% faster iterations',
+      logo: '🎨'
     }
   ]
 
+  const additionalLoopEntries = testimonials.slice(0, 3)
+  const marqueeTestimonials = [...testimonials, ...additionalLoopEntries]
+
   return (
-    <section className="bg-bg-primary py-24 lg:py-32" role="region" aria-labelledby="testimonials-heading">
-      <div className="max-w-7xl mx-auto px-5 lg:px-20">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 id="testimonials-heading" className="text-3xl md:text-4xl lg:text-h2 font-bold text-text-primary mb-6">
-            What Clients Say About Us
+    <section className="border-t border-ui-border bg-bg-primary py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 text-center sm:mb-16">
+          <Badge className="mb-4 border border-ui-border bg-bg-secondary text-text-secondary">
+            5.0 ★★★★★ Client Rating
+          </Badge>
+          <h2 className="text-2xl font-bold text-text-primary sm:text-3xl lg:text-4xl">
+            Trusted by Industry Leaders
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Real feedback from real clients. See how our work drives results.
+          <p className="mx-auto mt-4 max-w-3xl text-base text-text-secondary sm:text-lg">
+            See how we&apos;ve helped companies transform their operations with intelligent AI solutions and accelerated
+            development.
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={testimonial.id}
-              className="bg-bg-secondary rounded-2xl p-8 shadow-card hover:shadow-soft transition-all duration-300 hover:-translate-y-2 group"
-            >
-              {/* Quote Icon */}
-              <div className="w-12 h-12 bg-accent-gradient rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Quote className="w-6 h-6 text-white" />
-              </div>
-
-              {/* Rating */}
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, starIndex) => (
-                  <Star key={starIndex} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-
-              {/* Quote */}
-              <blockquote className="text-text-secondary leading-relaxed mb-6">
-                "{testimonial.quote}"
-              </blockquote>
-
-              {/* Author */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-yellow-100 rounded-full flex items-center justify-center">
-                    <span className="text-accent-primary font-bold text-lg">
-                      {testimonial.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-text-primary">
-                      {testimonial.name}
+        <div className="relative mb-12 overflow-hidden sm:mb-16">
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-bg-primary to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-bg-primary to-transparent" />
+          <div className="flex gap-6 sm:gap-8 animate-carousel will-change-transform">
+            {marqueeTestimonials.map((testimonial, index) => (
+              <Card
+                key={`${testimonial.company}-${index}`}
+                className="min-w-[320px] border border-ui-border bg-white shadow-lg transition-all duration-300 hover:shadow-xl sm:min-w-[380px]"
+              >
+                <CardContent className="p-4 sm:p-6">
+                  <div className="mb-3 flex items-center gap-3 sm:mb-4">
+                    <div className="text-xl sm:text-2xl">{testimonial.logo}</div>
+                    <div>
+                      <div className="text-sm font-semibold text-text-primary sm:text-base">{testimonial.company}</div>
+                      <div className="text-xs text-text-secondary sm:text-sm">{testimonial.industry}</div>
                     </div>
-                    {testimonial.title && (
-                      <div className="text-sm text-text-secondary">
-                        {testimonial.title} {testimonial.company && `at ${testimonial.company}`}
-                      </div>
-                    )}
                   </div>
-                </div>
-                {testimonial.metric && (
-                  <div className="text-sm font-semibold text-accent-primary">
-                    {testimonial.metric}
+                  <blockquote className="mb-3 text-sm italic leading-relaxed text-text-secondary sm:mb-4 sm:text-base">
+                    &quot;{testimonial.quote}&quot;
+                  </blockquote>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-sm font-medium text-text-primary">{testimonial.author}</div>
+                      <div className="text-xs text-text-secondary">{testimonial.role}</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-sm font-semibold text-text-primary sm:text-lg">{testimonial.metric}</div>
+                      <div className="text-xs text-text-tertiary">improvement</div>
+                    </div>
                   </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-accent-primary mb-2">50+</div>
-            <div className="text-text-secondary">Projects Completed</div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-accent-primary mb-2">98%</div>
-            <div className="text-text-secondary">Client Satisfaction</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-accent-primary mb-2">2x</div>
-            <div className="text-text-secondary">Average Growth</div>
-          </div>
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <button
-            onClick={() => onContactClick && onContactClick()}
-            className="bg-accent-gradient text-white px-8 py-4 rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-1"
-            aria-label="Book a 15-minute call"
-          >
-            Book a 15-min call
-          </button>
         </div>
       </div>
     </section>
   )
 }
+
+const Badge = ({ className = '', children }) => (
+  <span
+    className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] ${className}`}
+  >
+    {children}
+  </span>
+)
+
+const Card = ({ className = '', children }) => (
+  <div className={`rounded-2xl ${className}`}>
+    {children}
+  </div>
+)
+
+const CardContent = ({ className = '', children }) => (
+  <div className={className}>
+    {children}
+  </div>
+)
 
 export default Testimonials
