@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import TechiniumLogo from './TechiniumLogo'
 
@@ -54,24 +54,31 @@ const Navigation = ({ onContactClick }) => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <Link 
-              to="/" 
+            <a 
+              href="/" 
               className="flex items-center space-x-3 text-2xl font-bold text-text-primary hover:text-accent-primary transition-colors"
               aria-label="Home"
             >
               <TechiniumLogo size={40} />
               <span>Techinium</span>
-            </Link>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navigationItems.map((item) => (
-                <Link
+                <a
                   key={item.name}
-                  to={item.href}
-                  className={`px-3 py-2 text-sm font-medium transition-all duration-300 relative group ${
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    const element = document.querySelector(item.href)
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' })
+                    }
+                  }}
+                  className={`px-4 py-3 text-base font-medium transition-all duration-300 relative group cursor-pointer ${
                     isActive(item.href)
                       ? 'text-accent-primary'
                       : 'text-text-secondary hover:text-text-primary'
@@ -81,7 +88,7 @@ const Navigation = ({ onContactClick }) => {
                   <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-accent-gradient transition-all duration-300 ${
                     isActive(item.href) ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
                   }`}></span>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -90,7 +97,7 @@ const Navigation = ({ onContactClick }) => {
           <div className="flex items-center space-x-4">
             <button
               onClick={() => onContactClick && onContactClick()}
-              className="bg-accent-gradient text-white text-sm px-6 py-3 rounded-2xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 backdrop-blur-sm relative overflow-hidden group"
+              className="bg-accent-gradient text-white text-sm sm:text-base px-4 sm:px-6 py-3 rounded-2xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 backdrop-blur-sm relative overflow-hidden group"
               aria-label="Book a 15-minute call"
             >
               <span className="relative z-10">Got an idea?</span>
@@ -119,18 +126,25 @@ const Navigation = ({ onContactClick }) => {
         <div className="md:hidden bg-bg-secondary border-t border-ui-border shadow-lg">
           <div className="px-6 pt-4 pb-6 space-y-3">
             {navigationItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
-                to={item.href}
-                className={`block px-3 py-3 text-base font-medium transition-colors rounded-lg ${
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault()
+                  const element = document.querySelector(item.href)
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                  }
+                  setIsMobileMenuOpen(false)
+                }}
+                className={`block px-3 py-3 text-base font-medium transition-colors rounded-lg cursor-pointer ${
                   isActive(item.href)
                     ? 'text-accent-primary bg-accent-primary/10'
                     : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
                 }`}
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
             <button
               onClick={() => {

@@ -54,11 +54,11 @@ const CaseStudies = ({ onContactClick }) => {
   ]
 
   return (
-    <section className="bg-bg-secondary py-24 lg:py-32" role="region" aria-labelledby="case-studies-heading">
+    <section className="bg-bg-secondary py-16 sm:py-20 md:py-24 lg:py-32" role="region" aria-labelledby="case-studies-heading">
       <div className="max-w-7xl mx-auto px-5 lg:px-20">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 id="case-studies-heading" className="text-3xl md:text-4xl lg:text-h2 font-bold text-text-primary mb-6">
+          <h2 id="case-studies-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
             Case Studies
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
@@ -116,7 +116,7 @@ const CaseStudies = ({ onContactClick }) => {
                   </p>
 
                   {/* Metrics */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {study.metrics.map((metric, metricIndex) => (
                       <div key={metricIndex} className="bg-bg-primary rounded-xl p-4 shadow-card">
                         <div className="flex items-center gap-3 mb-2">

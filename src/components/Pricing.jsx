@@ -60,11 +60,11 @@ const Pricing = ({ onContactClick }) => {
   ]
 
   return (
-    <section className="bg-bg-primary py-24 lg:py-32" role="region" aria-labelledby="pricing-heading">
+    <section className="bg-bg-primary py-16 sm:py-20 md:py-24 lg:py-32" role="region" aria-labelledby="pricing-heading">
       <div className="max-w-7xl mx-auto px-5 lg:px-20">
         {/* Section Header */}
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 id="pricing-heading" className="text-3xl md:text-4xl lg:text-h2 font-bold text-text-primary mb-6">
+          <h2 id="pricing-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
             Pricing
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
@@ -73,7 +73,7 @@ const Pricing = ({ onContactClick }) => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
           {packages.map((pkg, index) => (
             <div
               key={index}

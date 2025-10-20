@@ -13,36 +13,38 @@ export const theme = {
     // Text Colors
     text: {
       primary: '#0F172A',      // Dark slate
-      secondary: '#6B7280',    // Muted gray
-      tertiary: '#9CA3AF',     // Light gray
-      accent: '#F76B1C',       // Rich reddish-orange accent
+      secondary: '#475569',    // More vibrant gray
+      tertiary: '#64748B',     // Medium gray
+      accent: '#FF4D00',      // Vibrant orange-red accent
     },
     
-    // Accent Gradient Colors - Modern Orange to Peach/Pink
+    // Accent Gradient Colors - Vibrant Orange to Pink/Purple
     accent: {
-      primary: '#FF6B35',      // Modern orange
-      secondary: '#FF8E53',    // Soft orange
-      tertiary: '#FFB366',     // Light orange
-      quaternary: '#FF9A8B',   // Peach
-      gradient: 'linear-gradient(135deg, #FF6B35 0%, #FF9A8B 50%, #FFB3BA 100%)',
-      gradientSoft: 'linear-gradient(135deg, #FF8E53 0%, #FFB3BA 100%)',
+      primary: '#FF4D00',      // Vibrant orange-red
+      secondary: '#FF6B35',    // Bright orange
+      tertiary: '#FF8E53',     // Warm orange
+      quaternary: '#FF6B9D',   // Vibrant pink
+      gradient: 'linear-gradient(135deg, #FF4D00 0%, #FF6B35 25%, #FF6B9D 75%, #E91E63 100%)',
+      gradientSoft: 'linear-gradient(135deg, #FF6B35 0%, #FF6B9D 100%)',
+      gradientVibrant: 'linear-gradient(135deg, #FF4D00 0%, #FF6B35 50%, #FF6B9D 100%)',
     },
     
     // UI Colors
     ui: {
-      border: '#E6E9EE',        // Light border
-      success: '#10B981',       // Green
-      warning: '#F59E0B',       // Amber
-      error: '#EF4444',         // Red
-      info: '#F76B1C',          // Rich reddish-orange
+      border: '#E2E8F0',        // Slightly more defined border
+      success: '#00D084',       // Vibrant green
+      warning: '#FF8C00',      // Vibrant amber
+      error: '#FF3B30',         // Vibrant red
+      info: '#FF4D00',          // Vibrant orange-red
     },
     
-    // Card Gradients (light theme)
+    // Card Gradients (vibrant theme)
     cardGradients: {
-      orangeYellow: 'linear-gradient(135deg, #F76B1C 0%, #FFF8BE 100%)',
-      softOrange: 'linear-gradient(135deg, #FF8C42 0%, #FFB366 100%)',
-      lightOrange: 'linear-gradient(135deg, #FFB366 0%, #FFD93D 100%)',
-      warmYellow: 'linear-gradient(135deg, #FFD93D 0%, #FFF8BE 100%)',
+      vibrantOrange: 'linear-gradient(135deg, #FF4D00 0%, #FF6B35 100%)',
+      orangePink: 'linear-gradient(135deg, #FF6B35 0%, #FF6B9D 100%)',
+      pinkPurple: 'linear-gradient(135deg, #FF6B9D 0%, #E91E63 100%)',
+      warmOrange: 'linear-gradient(135deg, #FF8C42 0%, #FFB366 100%)',
+      vibrantYellow: 'linear-gradient(135deg, #FFD93D 0%, #FF6B35 100%)',
       subtle: 'linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%)',
     }
   },

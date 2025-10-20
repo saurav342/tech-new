@@ -55,11 +55,11 @@ const FAQ = ({ onContactClick }) => {
   }
 
   return (
-    <section className="bg-bg-secondary py-24 lg:py-32" role="region" aria-labelledby="faq-heading">
+    <section className="bg-bg-secondary py-16 sm:py-20 md:py-24 lg:py-32" role="region" aria-labelledby="faq-heading">
       <div className="max-w-4xl mx-auto px-5 lg:px-20">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 id="faq-heading" className="text-3xl md:text-4xl lg:text-h2 font-bold text-text-primary mb-6">
+          <h2 id="faq-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
             Frequently asked questions
           </h2>
           <p className="text-xl text-text-secondary leading-relaxed">

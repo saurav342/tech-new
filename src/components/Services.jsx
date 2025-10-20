@@ -40,11 +40,11 @@ const Services = ({ onContactClick }) => {
   ]
 
   return (
-    <section className="bg-bg-secondary py-24 lg:py-32" role="region" aria-labelledby="services-heading">
+    <section className="bg-bg-secondary py-16 sm:py-20 md:py-24 lg:py-32" role="region" aria-labelledby="services-heading">
       <div className="max-w-7xl mx-auto px-5 lg:px-20">
         {/* Section Header */}
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 id="services-heading" className="text-3xl md:text-4xl lg:text-h2 font-bold text-text-primary mb-6">
+          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
             Designs That Drive Results
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
@@ -53,7 +53,7 @@ const Services = ({ onContactClick }) => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
@@ -92,7 +92,7 @@ const Services = ({ onContactClick }) => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
           <div className="bg-bg-primary rounded-2xl p-8 shadow-card text-center animate-on-scroll hover-scale">
             <div className="text-4xl font-bold text-accent-primary mb-2">+80%</div>
             <div className="text-text-secondary">User Retention</div>

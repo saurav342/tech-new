@@ -62,11 +62,11 @@ const Process = ({ onContactClick }) => {
   ]
 
   return (
-    <section className="bg-bg-primary py-24 lg:py-32" role="region" aria-labelledby="process-heading">
+    <section className="bg-bg-primary py-16 sm:py-20 md:py-24 lg:py-32" role="region" aria-labelledby="process-heading">
       <div className="max-w-7xl mx-auto px-5 lg:px-20">
         {/* Section Header */}
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 id="process-heading" className="text-3xl md:text-4xl lg:text-h2 font-bold text-text-primary mb-6">
+          <h2 id="process-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
             How We Work
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
@@ -83,7 +83,7 @@ const Process = ({ onContactClick }) => {
           <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-ui-border"></div>
           
           {/* Steps Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
             {steps.map((step, index) => (
               <div key={index} className={`relative animate-on-scroll hover-scale`} style={{ animationDelay: `${index * 0.3}s` }}>
                 {/* Step Number & Icon */}

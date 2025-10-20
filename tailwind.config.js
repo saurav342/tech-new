@@ -15,15 +15,15 @@ export default {
         'bg-banner': '#F8FAFC',
         
         'text-primary': '#0F172A',
-        'text-secondary': '#6B7280',
-        'text-tertiary': '#9CA3AF',
-        'text-accent': '#F76B1C',
+        'text-secondary': '#475569',
+        'text-tertiary': '#64748B',
+        'text-accent': '#FF4D00',
         
-        'accent-primary': '#FF6B35',
-        'accent-secondary': '#FF8E53',
-        'accent-tertiary': '#FFB366',
-        'accent-quaternary': '#FF9A8B',
-        'ui-border': '#E6E9EE',
+        'accent-primary': '#FF4D00',
+        'accent-secondary': '#FF6B35',
+        'accent-tertiary': '#FF8E53',
+        'accent-quaternary': '#FF6B9D',
+        'ui-border': '#E2E8F0',
         
         // Vibrant color palette
         vibrant: {
@@ -121,10 +121,10 @@ export default {
         },
         glow: {
           '0%': {
-            boxShadow: '0 0 20px rgba(255, 107, 53, 0.3)',
+            boxShadow: '0 0 20px rgba(255, 77, 0, 0.4)',
           },
           '100%': {
-            boxShadow: '0 0 30px rgba(255, 107, 53, 0.6)',
+            boxShadow: '0 0 30px rgba(255, 77, 0, 0.7)',
           },
         },
         shimmer: {
@@ -163,12 +163,12 @@ export default {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'accent-gradient': 'linear-gradient(135deg, #FF6B35 0%, #FF9A8B 50%, #FFB3BA 100%)',
-        'accent-gradient-soft': 'linear-gradient(135deg, #FF8E53 0%, #FFB3BA 100%)',
-        'orange-peach': 'linear-gradient(135deg, #FF6B35 0%, #FF9A8B 100%)',
-        'soft-orange': 'linear-gradient(135deg, #FF8E53 0%, #FFB366 100%)',
-        'light-orange': 'linear-gradient(135deg, #FFB366 0%, #FFD93D 100%)',
-        'warm-yellow': 'linear-gradient(135deg, #FFD93D 0%, #FFF8BE 100%)',
+        'accent-gradient': 'linear-gradient(135deg, #FF4D00 0%, #FF6B35 25%, #FF6B9D 75%, #E91E63 100%)',
+        'accent-gradient-soft': 'linear-gradient(135deg, #FF6B35 0%, #FF6B9D 100%)',
+        'accent-gradient-vibrant': 'linear-gradient(135deg, #FF4D00 0%, #FF6B35 50%, #FF6B9D 100%)',
+        'orange-pink': 'linear-gradient(135deg, #FF6B35 0%, #FF6B9D 100%)',
+        'pink-purple': 'linear-gradient(135deg, #FF6B9D 0%, #E91E63 100%)',
+        'vibrant-orange': 'linear-gradient(135deg, #FF4D00 0%, #FF6B35 100%)',
         'subtle': 'linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%)',
         'glassmorphism': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
       },

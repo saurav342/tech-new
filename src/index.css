@@ -70,7 +70,7 @@
   }
   
   .text-gradient-orange-yellow {
-    background: linear-gradient(135deg, #FF6B35 0%, #FF9A8B 50%, #FFB3BA 100%);
+    background: linear-gradient(135deg, #FF4D00 0%, #FF6B35 25%, #FF6B9D 75%, #E91E63 100%);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -79,12 +79,12 @@
   }
   
   .text-gradient-shimmer {
-    background: linear-gradient(90deg, #FF6B35 0%, #FF9A8B 25%, #FFB3BA 50%, #FF9A8B 75%, #FF6B35 100%);
+    background: linear-gradient(90deg, #FF4D00 0%, #FF6B35 20%, #FF6B9D 40%, #E91E63 60%, #FF6B9D 80%, #FF4D00 100%);
     background-size: 200% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* Removed shimmer animation - too distracting */
+    animation: gradientShimmer 3s ease-in-out infinite;
   }
   
   .btn-light-primary {
@@ -100,7 +100,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   
@@ -132,7 +132,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 154, 139, 0.1));
+    background: linear-gradient(135deg, rgba(255, 77, 0, 0.15), rgba(255, 107, 157, 0.15));
     opacity: 0;
     transition: opacity 0.3s ease-out;
     border-radius: inherit;
@@ -160,7 +160,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(255, 154, 139, 0.05));
+    background: linear-gradient(135deg, rgba(255, 77, 0, 0.08), rgba(255, 107, 157, 0.08));
     opacity: 0;
     transition: opacity 0.4s ease-out;
     border-radius: inherit;
@@ -437,6 +437,15 @@
   }
   50% {
     background-position: 100% 50%;
+  }
+}
+
+@keyframes gradientShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
   }
 }
 

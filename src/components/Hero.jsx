@@ -51,7 +51,7 @@ const Hero = ({ onContactClick, onWorkClick }) => {
   return (
     <>
       {/* Banner Section */}
-      <section className="bg-bg-secondary border-b border-ui-border py-4">
+      {/* <section className="bg-bg-secondary border-b border-ui-border py-4">
         <div className="max-w-7xl mx-auto px-5 lg:px-20">
           <div className="text-center">
             <p className="text-sm text-text-secondary">
@@ -59,7 +59,7 @@ const Hero = ({ onContactClick, onWorkClick }) => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="bg-bg-primary text-text-primary py-32 lg:py-40 relative overflow-hidden min-h-screen flex items-center" role="banner">
         {/* Background Elements */}
@@ -73,11 +73,8 @@ const Hero = ({ onContactClick, onWorkClick }) => {
         <div className="max-w-7xl mx-auto px-5 lg:px-20 relative z-10">
           <div className="text-center space-y-8">
             {/* Main Heading */}
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-display font-bold leading-tight text-text-primary tracking-tight transition-all duration-1000 ease-out ${elementsVisible.heading ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              Idea to MVP in{' '}
-              <span className="text-gradient-shimmer inline-block">
-                4 weeks
-              </span>
+            <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-display font-bold leading-tight text-text-primary tracking-tight transition-all duration-1000 ease-out ${elementsVisible.heading ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              Idea to MVP in <span className="text-gradient-shimmer inline-block">4 weeks</span>
             </h1>
             
             {/* Tagline */}
