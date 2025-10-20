@@ -50,7 +50,7 @@ const Hero = ({ onContactClick, onWorkClick }) => {
 
   return (
     <>
-      {/* Banner Section */}
+      {/* Social Proof Banner */}
       {/* <section className="bg-bg-secondary border-b border-ui-border py-4">
         <div className="max-w-7xl mx-auto px-5 lg:px-20">
           <div className="text-center">
@@ -61,7 +61,7 @@ const Hero = ({ onContactClick, onWorkClick }) => {
         </div>
       </section> */}
 
-      <section className="bg-bg-primary text-text-primary py-32 lg:py-40 relative overflow-hidden min-h-screen flex items-center" role="banner">
+      <section className="bg-bg-primary text-text-primary py-20 lg:py-32 relative overflow-hidden min-h-screen flex items-center" role="banner">
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-gradient opacity-5 rounded-full blur-3xl animate-float parallax" data-speed="0.3"></div>
@@ -71,33 +71,28 @@ const Hero = ({ onContactClick, onWorkClick }) => {
         </div>
 
         <div className="max-w-7xl mx-auto px-5 lg:px-20 relative z-10">
-          <div className="text-center space-y-4">
-            {/* Main Heading */}
-            <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-display font-bold leading-tight text-text-primary tracking-tight transition-all duration-1000 ease-out ${elementsVisible.heading ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              Idea to MVP in <span className="text-gradient-shimmer inline-block">4 weeks</span>
+          <div className="text-center space-y-8">
+            {/* Main Heading - Bold and Beautiful */}
+            <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-display font-bold leading-tight text-text-primary tracking-tight transition-all duration-1000 ease-out ${elementsVisible.heading ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="mb-2">Idea to MVP in</div>
+              <div className="text-gradient-shimmer">4 weeks</div>
             </h1>
             
-            {/* Tagline */}
-            <p className={`text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto font-light transition-all duration-1000 ease-out ${elementsVisible.tagline ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-              Build fast. Launch smart. Scale with confidence.
+            {/* Tagline - Clean and Simple */}
+            <p className={`text-xl md:text-2xl text-text-secondary leading-relaxed max-w-4xl mx-auto font-normal transition-all duration-1000 ease-out ${elementsVisible.tagline ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+            Every business needs a powerful digital presence — and it’s never been easier to build your website, app, or SaaS product.
             </p>
             
-            {/* Subheading */}
-            <p className={`text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl mx-auto font-normal transition-all duration-1000 ease-out ${elementsVisible.subheading ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-              Every business needs a website, and it's never been easier to get one.
-            </p>
-            
-            {/* CTA */}
-            <div className={`flex justify-center pt-2 transition-all duration-1000 ease-out ${elementsVisible.cta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+            {/* CTA - Prominent and Beautiful */}
+            <div className={`flex justify-center pt-6 transition-all duration-1000 ease-out ${elementsVisible.cta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
               <a
                 href="https://cal.com/techinium/15min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-accent-gradient text-white px-12 py-5 rounded-2xl font-medium hover:shadow-soft transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-105 flex items-center justify-center gap-3 text-lg backdrop-blur-sm relative overflow-hidden group hover-glow transform-gpu inline-block"
-                aria-label="Book a 15-minute strategy call"
+                className="bg-accent-gradient text-white px-10 py-5 rounded-2xl font-semibold hover:shadow-soft transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-105 flex items-center justify-center gap-3 text-lg backdrop-blur-sm relative overflow-hidden group hover-glow transform-gpu inline-block"
+                aria-label="Book a 15-minute call"
               >
-                <span className="text-xl transition-transform duration-300 group-hover:scale-110">🚀</span>
-                <span className="relative z-10 transition-all duration-300">Book a 15-min Strategy Call</span>
+                <span className="relative z-10 transition-all duration-300">Book a 15-min call</span>
                 <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-2 transition-transform duration-500 ease-out" />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
