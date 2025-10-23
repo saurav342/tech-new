@@ -60,21 +60,28 @@ const Footer = ({ onContactClick }) => {
   return (
     <>
       {/* Final CTA Section */}
-      <section className="bg-bg-secondary py-16">
-        <div className="max-w-7xl mx-auto px-5 lg:px-20 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-            Scale your business with ease. Over 60+ startups trusted us and increased their revenue!
+      <section className="section-shell surface-alt">
+        <div className="max-w-4xl mx-auto px-5 text-center space-y-6">
+          <h2 className="section-heading">
+            Ready when you are. Let’s scope your roadmap together.
           </h2>
-          <a
-            href="https://cal.com/techinium/15min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-accent-gradient text-white px-8 py-4 rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-1 mt-8 inline-block"
-            aria-label="Book a 30-minute call"
-          >
-            Book a 30-min call
-          </a>
-          
+          <p className="section-subheading">
+            Join 60+ founders who launched faster with our design, engineering, and AI automation sprints.
+          </p>
+          <div className="space-y-3">
+            <a
+              href="https://cal.com/techinium/15min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-primary justify-center"
+              aria-label="Book a 30-minute call"
+            >
+              Book a 30-min call
+            </a>
+            <p className="text-sm text-text-tertiary">
+              No sales pitch — expect a collaborative audit and next-step plan.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -142,16 +149,16 @@ const Footer = ({ onContactClick }) => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-6 mb-4 md:mb-0">
               <a href="#" className="text-text-tertiary hover:text-accent-primary transition-colors" aria-label="Instagram">
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-5 h-5" aria-hidden="true" />
               </a>
               <a href="#" className="text-text-tertiary hover:text-accent-primary transition-colors" aria-label="X (Twitter)">
-                <Twitter className="w-5 h-5" />
+                <Twitter className="w-5 h-5" aria-hidden="true" />
               </a>
               <a href="#" className="text-text-tertiary hover:text-accent-primary transition-colors" aria-label="LinkedIn">
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5" aria-hidden="true" />
               </a>
               <a href="#" className="text-text-tertiary hover:text-accent-primary transition-colors" aria-label="GitHub">
-                <Github className="w-5 h-5" />
+                <Github className="w-5 h-5" aria-hidden="true" />
               </a>
             </div>
             <p className="text-text-tertiary text-sm">
@@ -166,4 +173,3 @@ const Footer = ({ onContactClick }) => {
 }
 
 export default Footer
-

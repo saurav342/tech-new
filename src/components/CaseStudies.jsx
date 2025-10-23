@@ -20,7 +20,10 @@ const CaseStudies = ({ onContactClick }) => {
       title: 'Malamacabs Mobility Platform',
       client: 'Malamacabs',
       description: 'Built an end-to-end ride hailing platform with real-time driver tracking, automated payouts, and a unified customer booking experience.',
-      image: '/screenshots/malama.png',
+      image: {
+        webp: '/screenshots/malama.webp',
+        fallback: '/screenshots/malama.png'
+      },
       imageAlt: 'Malamacabs driver and passenger dashboards',
       metrics: [
         { label: 'Time to Launch', value: '6 weeks', icon: Clock },
@@ -39,7 +42,10 @@ const CaseStudies = ({ onContactClick }) => {
       title: 'Gotitli B2B Ordering Suite',
       client: 'Gotitli',
       description: 'Scaled a B2B procurement marketplace with real-time inventory sync, digital catalogs, and automated invoicing across vendors.',
-      image: '/screenshots/gotitli.png',
+      image: {
+        webp: '/screenshots/gotitli.webp',
+        fallback: '/screenshots/gotitli.png'
+      },
       imageAlt: 'Gotitli B2B ordering interface',
       metrics: [
         { label: 'Conversion Lift', value: '+230%', icon: TrendingUp },
@@ -56,49 +62,52 @@ const CaseStudies = ({ onContactClick }) => {
   ]
 
   return (
-    <section className="bg-bg-secondary py-12 sm:py-16 md:py-20 lg:py-24" role="region" aria-labelledby="case-studies-heading">
-      <div className="max-w-7xl mx-auto px-5 lg:px-20">
+    <section className="section-shell surface-contrast" role="region" aria-labelledby="case-studies-heading">
+      <div className="container-light">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 id="case-studies-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
-            Case Studies
+        <div className="text-center mb-16 animate-on-scroll">
+          <span className="section-eyebrow">Proof</span>
+          <h2 id="case-studies-heading" className="section-heading mt-4">
+            Case studies from fast-moving teams
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Real results from real projects. See how we've helped startups 
-            and SaaS teams achieve their goals.
+          <p className="section-subheading mt-6">
+            Real outcomes from founders and operators who needed to ship quickly — without compromising craft.
           </p>
         </div>
 
         {/* Case Studies */}
-        <div className="space-y-16">
-          {caseStudies.map((study, index) => (
+        <div className="space-y-20">
+          {caseStudies.map((study) => (
             <div
               key={study.id}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
-                study.layout === 'right' ? 'lg:grid-flow-col-dense' : ''
-              }`}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center animate-on-scroll"
             >
               {/* Image */}
-              <div className={`${study.layout === 'right' ? 'lg:col-start-2' : ''}`}>
+              <div className={`${study.layout === 'right' ? 'lg:col-start-2 lg:row-start-1' : ''}`}>
                 <div className="relative group">
-                  <div className="aspect-[3/2] bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl shadow-soft overflow-hidden">
-                    <img
-                      src={study.image}
-                      alt={study.imageAlt}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
+                  <div className="aspect-[3/2] bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl shadow-soft overflow-hidden border border-ui-border/60">
+                    <picture>
+                      <source srcSet={study.image.webp} type="image/webp" />
+                      <img
+                        src={study.image.fallback}
+                        alt={study.imageAlt}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                        width="1505"
+                        height="857"
+                      />
+                    </picture>
                   </div>
                   
                   {/* Floating Elements */}
-                  <div className="absolute -top-4 -right-4 w-12 h-12 bg-soft-blue rounded-xl shadow-card transform rotate-12 animate-float"></div>
-                  <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-light-purple rounded-lg shadow-card transform -rotate-12 animate-float" style={{animationDelay: '1s'}}></div>
+                  <div className="absolute -top-4 -right-4 w-12 h-12 bg-soft-blue rounded-xl shadow-card transform rotate-12 animate-float" aria-hidden="true"></div>
+                  <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-light-purple rounded-lg shadow-card transform -rotate-12 animate-float" style={{animationDelay: '1s'}} aria-hidden="true"></div>
                 </div>
               </div>
 
               {/* Content */}
-              <div className={`${study.layout === 'right' ? 'lg:col-start-1' : ''}`}>
-                <div className="space-y-6">
+              <div className={`${study.layout === 'right' ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+                <div className="space-y-6 bg-white/85 backdrop-blur-sm border border-ui-border/60 rounded-3xl p-8 shadow-card">
                   {/* Header */}
                   <div>
                     <h3 className="text-2xl lg:text-3xl font-bold text-text-primary mb-2">
@@ -119,7 +128,7 @@ const CaseStudies = ({ onContactClick }) => {
                     {study.metrics.map((metric, metricIndex) => (
                       <div key={metricIndex} className="bg-bg-primary rounded-xl p-4 shadow-card">
                         <div className="flex items-center gap-3 mb-2">
-                          <div className="w-8 h-8 bg-accent-gradient rounded-lg flex items-center justify-center">
+                          <div className="w-8 h-8 bg-accent-gradient rounded-lg flex items-center justify-center" aria-hidden="true">
                             <metric.icon className="w-4 h-4 text-white" />
                           </div>
                           <span className="text-sm text-text-secondary">{metric.label}</span>
@@ -149,7 +158,7 @@ const CaseStudies = ({ onContactClick }) => {
                     href="https://cal.com/techinium/15min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-accent-primary font-medium hover:text-accent-secondary transition-colors duration-300"
+                    className="cta-secondary w-full sm:w-auto"
                     aria-label={`Learn more about ${study.title}`}
                   >
                     Learn More
@@ -162,20 +171,23 @@ const CaseStudies = ({ onContactClick }) => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <p className="text-text-secondary mb-6">
+        <div className="text-center mt-16 animate-on-scroll space-y-4">
+          <p className="text-text-secondary">
             Want to see more case studies or discuss your project?
           </p>
           <a
             href="https://cal.com/techinium/15min"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent-gradient text-white px-8 py-4 rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-1 flex items-center gap-2 mx-auto"
+            className="cta-primary justify-center inline-flex"
             aria-label="View all case studies"
           >
             View All Case Studies
             <ArrowRight className="w-5 h-5" />
           </a>
+          <p className="text-sm text-text-tertiary">
+            We’ll unpack your use case and send a tailored timeline within 24 hours.
+          </p>
         </div>
       </div>
     </section>

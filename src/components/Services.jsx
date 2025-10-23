@@ -15,6 +15,14 @@ import { ArrowRight, TrendingUp, Target, BarChart3 } from 'lucide-react'
  * - onContactClick: Function to handle CTA clicks
  */
 const Services = ({ onContactClick }) => {
+  const handleServiceCta = (serviceTitle) => {
+    if (onContactClick) {
+      onContactClick(serviceTitle)
+    } else if (typeof window !== 'undefined') {
+      window.open('https://cal.com/techinium/15min', '_blank', 'noopener,noreferrer')
+    }
+  }
+
   const services = [
     {
       icon: TrendingUp,
@@ -40,15 +48,16 @@ const Services = ({ onContactClick }) => {
   ]
 
   return (
-    <section className="bg-bg-secondary py-12 sm:py-16 md:py-20 lg:py-24" role="region" aria-labelledby="services-heading">
-      <div className="max-w-7xl mx-auto px-5 lg:px-20">
+    <section className="section-shell surface-alt" role="region" aria-labelledby="services-heading">
+      <div className="container-light">
         {/* Section Header */}
-        <div className="text-center mb-12 animate-on-scroll">
-          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
-            Designs That Drive Results
+        <div className="text-center mb-16 animate-on-scroll">
+          <span className="section-eyebrow">Capabilities</span>
+          <h2 id="services-heading" className="section-heading mt-4">
+            Designs that drive meaningful growth
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            What we can help you to achieve?
+          <p className="section-subheading mt-6">
+            From zero-to-one MVPs to conversion-focused launchpads, our cross-functional team builds experiences that move the metrics that matter.
           </p>
         </div>
 
@@ -57,11 +66,11 @@ const Services = ({ onContactClick }) => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`bg-bg-primary rounded-2xl p-8 shadow-card hover:shadow-soft transition-all duration-400 hover:-translate-y-1 group animate-on-scroll hover-lift`}
+              className={`card-light h-full flex flex-col animate-on-scroll`}
               style={{ animationDelay: `${index * 0.3}s` }}
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-accent-gradient rounded-2xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-400">
+              <div className="w-16 h-16 bg-accent-gradient rounded-2xl flex items-center justify-center mb-6 transition-transform duration-400 hover:scale-105" aria-hidden="true">
                 <service.icon className="w-8 h-8 text-white" />
               </div>
 
@@ -79,29 +88,33 @@ const Services = ({ onContactClick }) => {
               </p>
 
               {/* CTA */}
-              <a
-                href="https://cal.com/techinium/15min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-accent-gradient text-white py-3 px-6 rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
-                aria-label={`${service.cta} for ${service.title}`}
-              >
-                {service.cta}
-                <ArrowRight className="w-4 h-4" />
-              </a>
+              <div className="mt-auto space-y-3">
+                <button
+                  type="button"
+                  onClick={() => handleServiceCta(service.title)}
+                  className="cta-secondary w-full justify-center"
+                  aria-label={`${service.cta} for ${service.title}`}
+                >
+                  {service.cta}
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                <p className="text-sm text-text-tertiary text-center">
+                  Includes roadmap review + actionable next steps.
+                </p>
+              </div>
             </div>
           ))}
         </div>
 
         {/* Stats Section */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
-          <div className="bg-bg-primary rounded-2xl p-8 shadow-card text-center animate-on-scroll hover-scale">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+          <div className="stats-card-light text-center animate-on-scroll">
             <div className="text-4xl font-bold text-accent-primary mb-2">+80%</div>
-            <div className="text-text-secondary">User Retention</div>
+            <div className="text-text-secondary">User retention</div>
           </div>
-          <div className="bg-bg-primary rounded-2xl p-8 shadow-card text-center animate-on-scroll hover-scale" style={{ animationDelay: '0.3s' }}>
+          <div className="stats-card-light text-center animate-on-scroll" style={{ animationDelay: '0.3s' }}>
             <div className="text-4xl font-bold text-accent-primary mb-2">+150%</div>
-            <div className="text-text-secondary">Leads</div>
+            <div className="text-text-secondary">Qualified leads</div>
           </div>
         </div>
       </div>

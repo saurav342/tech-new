@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
 import Process from '../components/Process'
@@ -21,6 +22,9 @@ import FAQ from '../components/FAQ'
  * - onContactClick: Function to handle contact modal opening
  */
 const Home = ({ onContactClick }) => {
+  const location = useLocation()
+  const navigate = useNavigate()
+
   useEffect(() => {
     // Enhanced Intersection Observer for animations - PayPal inspired
     const observerOptions = {
@@ -67,6 +71,25 @@ const Home = ({ onContactClick }) => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
+  useEffect(() => {
+    const targetId = location.state?.targetId
+
+    if (targetId) {
+      const scrollTimer = setTimeout(() => {
+        const section = document.getElementById(targetId)
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          navigate(
+            { pathname: location.pathname, hash: `#${targetId}` },
+            { replace: true, state: null }
+          )
+        }
+      }, 120)
+
+      return () => clearTimeout(scrollTimer)
+    }
+  }, [location.state, location.pathname, navigate])
 
   const handleWorkClick = () => {
     // Scroll to case studies section

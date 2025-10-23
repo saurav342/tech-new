@@ -83,25 +83,24 @@ const Testimonials = () => {
   const marqueeTestimonials = [...testimonials, ...additionalLoopEntries]
 
   return (
-    <section className="border-t border-ui-border bg-bg-primary py-16 sm:py-20 lg:py-24">
+    <section className="section-shell-dense bg-bg-primary border-t border-ui-border/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 text-center sm:mb-16">
+        <div className="text-center mb-16 sm:mb-20">
           <Badge className="mb-4 border border-ui-border bg-bg-secondary text-text-secondary">
             5.0 ★★★★★ Client Rating
           </Badge>
-          <h2 className="text-2xl font-bold text-text-primary sm:text-3xl lg:text-4xl">
-            Trusted by Industry Leaders
+          <h2 className="section-heading">
+            Trusted by industry leaders
           </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-base text-text-secondary sm:text-lg">
-            See how we&apos;ve helped companies transform their operations with intelligent AI solutions and accelerated
-            development.
+          <p className="section-subheading mt-6">
+            See how AI-enhanced delivery, motion design, and rapid engineering helped teams hit ambitious launch goals.
           </p>
         </div>
 
-        <div className="relative mb-12 overflow-hidden sm:mb-16">
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-bg-primary to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-bg-primary to-transparent" />
-          <div className="flex gap-6 sm:gap-8 animate-carousel will-change-transform">
+        <div className="relative mb-12 overflow-hidden sm:mb-16 rounded-3xl border border-ui-border/60 bg-white/85 backdrop-blur-sm py-6">
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white via-white/80 to-transparent" aria-hidden="true" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white via-white/80 to-transparent" aria-hidden="true" />
+          <div className="flex gap-6 sm:gap-8 animate-carousel will-change-transform px-4 sm:px-6">
             {marqueeTestimonials.map((testimonial, index) => (
               <Card
                 key={`${testimonial.company}-${index}`}
@@ -109,7 +108,9 @@ const Testimonials = () => {
               >
                 <CardContent className="p-4 sm:p-6">
                   <div className="mb-3 flex items-center gap-3 sm:mb-4">
-                    <div className="text-xl sm:text-2xl">{testimonial.logo}</div>
+                    <div className="text-xl sm:text-2xl" role="img" aria-label={`${testimonial.company} logo`}>
+                      {testimonial.logo}
+                    </div>
                     <div>
                       <div className="text-sm font-semibold text-text-primary sm:text-base">{testimonial.company}</div>
                       <div className="text-xs text-text-secondary sm:text-sm">{testimonial.industry}</div>
@@ -132,6 +133,12 @@ const Testimonials = () => {
               </Card>
             ))}
           </div>
+        </div>
+
+        <div className="text-center space-y-4">
+          <p className="text-text-secondary">
+            Want references? We’ll connect you with founders who built with us.
+          </p>
         </div>
       </div>
     </section>

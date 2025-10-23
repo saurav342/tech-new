@@ -62,49 +62,54 @@ const Process = ({ onContactClick }) => {
   ]
 
   return (
-    <section className="bg-bg-primary py-12 sm:py-16 md:py-20 lg:py-24" role="region" aria-labelledby="process-heading">
-      <div className="max-w-7xl mx-auto px-5 lg:px-20">
+    <section className="section-shell" role="region" aria-labelledby="process-heading">
+      <div className="container-light">
         {/* Section Header */}
-        <div className="text-center mb-12 animate-on-scroll">
-          <h2 id="process-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
-            How We Work
+        <div className="text-center mb-16 animate-on-scroll">
+          <span className="section-eyebrow">Methodology</span>
+          <h2 id="process-heading" className="section-heading mt-4">
+            A transparent, AI-assisted build process
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Our Process, Step by Step
+          <p className="section-subheading mt-6">
+            Every engagement follows a rhythm that keeps stakeholders aligned, feedback flowing, and shipping velocity high.
           </p>
-          <p className="text-lg text-text-tertiary mt-4">
-            From the first step to the final product at your hand!
+          <p className="section-microcopy">
+            Each step includes async updates, live working sessions, and approved checkpoints before we move forward.
           </p>
         </div>
 
         {/* Process Timeline */}
         <div className="relative">
           {/* Desktop Timeline Line */}
-          <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-ui-border"></div>
+          <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-ui-border/60"></div>
           
           {/* Steps Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
             {steps.map((step, index) => (
-              <div key={index} className={`relative animate-on-scroll hover-scale`} style={{ animationDelay: `${index * 0.3}s` }}>
+              <div
+                key={index}
+                className="relative animate-on-scroll hover-scale bg-white/85 backdrop-blur-sm border border-ui-border/60 rounded-2xl p-6 flex flex-col gap-4"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
                 {/* Step Number & Icon */}
-                <div className="flex flex-col items-center mb-6">
-                  <div className="relative z-10 w-16 h-16 bg-bg-primary border-4 border-ui-border rounded-full flex items-center justify-center mb-4 group-hover:border-accent-primary transition-colors duration-400 hover-scale">
+                <div className="flex flex-col items-center">
+                  <div className="relative z-10 w-16 h-16 bg-bg-primary border-4 border-ui-border rounded-full flex items-center justify-center mb-4 transition-colors duration-400 hover:border-accent-primary" aria-hidden="true">
                     <step.icon className="w-8 h-8 text-accent-primary" />
                   </div>
                   
                   {/* Step Number */}
-                  <div className="w-8 h-8 bg-accent-gradient rounded-full flex items-center justify-center text-white font-bold text-sm">
+                  <div className="w-8 h-8 bg-accent-gradient rounded-full flex items-center justify-center text-white font-bold text-sm shadow-soft">
                     {index + 1}
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="text-center">
-                  <h3 className="text-xl font-bold text-text-primary mb-3">
+                <div className="text-center space-y-4">
+                  <h3 className="text-xl font-bold text-text-primary">
                     {step.title}
                   </h3>
                   
-                  <p className="text-text-secondary mb-4 leading-relaxed">
+                  <p className="text-text-secondary leading-relaxed">
                     {step.description}
                   </p>
 
@@ -120,8 +125,8 @@ const Process = ({ onContactClick }) => {
 
                 {/* Arrow for mobile */}
                 {index < steps.length - 1 && (
-                  <div className="lg:hidden flex justify-center mt-8">
-                    <ArrowRight className="w-6 h-6 text-ui-border" />
+                  <div className="lg:hidden flex justify-center pt-4">
+                    <ArrowRight className="w-6 h-6 text-ui-border" aria-hidden="true" />
                   </div>
                 )}
               </div>
@@ -130,10 +135,21 @@ const Process = ({ onContactClick }) => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-12 animate-on-scroll">
-          <h3 className="text-2xl font-bold text-text-primary mb-4">
-            Your all in one design partner.
+        <div className="text-center mt-16 animate-on-scroll space-y-4">
+          <h3 className="text-2xl font-bold text-text-primary">
+            Your all-in-one design + build partner.
           </h3>
+          <p className="text-text-secondary max-w-2xl mx-auto">
+            Ready for a walkthrough? We can scope your first sprint and align stakeholders in just 30 minutes.
+          </p>
+          <button
+            type="button"
+            onClick={() => onContactClick?.('Discovery Call')}
+            className="cta-secondary"
+          >
+            Map your first sprint
+            <ArrowRight className="w-4 h-4" />
+          </button>
         </div>
       </div>
     </section>

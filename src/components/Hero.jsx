@@ -73,9 +73,9 @@ const Hero = ({ onContactClick, onWorkClick }) => {
         <div className="max-w-7xl mx-auto px-5 lg:px-20 relative z-10">
           <div className="text-center space-y-8">
             {/* Main Heading - Bold and Beautiful */}
-            <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-display font-bold leading-tight text-text-primary tracking-tight transition-all duration-1000 ease-out flex flex-nowrap items-center justify-center gap-4 ${elementsVisible.heading ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-display font-bold leading-[1.05] text-text-primary tracking-tight transition-all duration-1000 ease-out flex flex-nowrap items-center justify-center gap-4 ${elementsVisible.heading ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <span className="whitespace-nowrap">Idea to MVP in</span>
-              <span className="text-gradient-shimmer whitespace-nowrap">4 weeks </span>
+              <span className="text-gradient-shimmer whitespace-nowrap hero-motion">4 weeks</span>
             </h1>
             
             {/* Tagline - Clean and Simple */}
@@ -84,20 +84,31 @@ const Hero = ({ onContactClick, onWorkClick }) => {
             </p>
             
             {/* CTA - Prominent and Beautiful */}
-            <div className={`flex justify-center pt-6 transition-all duration-1000 ease-out ${elementsVisible.cta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+            <div className={`flex flex-col items-center gap-4 pt-6 transition-all duration-1000 ease-out sm:flex-row sm:justify-center ${elementsVisible.cta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
               <a
                 href="https://cal.com/techinium/15min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-accent-gradient text-white px-10 py-5 rounded-2xl font-semibold hover:shadow-soft transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-105 flex items-center justify-center gap-3 text-lg backdrop-blur-sm relative overflow-hidden group hover-glow transform-gpu inline-block"
+                className="cta-primary text-base sm:text-lg justify-center group"
                 aria-label="Book a 15-minute call"
               >
                 <span className="relative z-10 transition-all duration-300">Book a 15-min call</span>
                 <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-2 transition-transform duration-500 ease-out" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
-                <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" aria-hidden="true"></div>
+                <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" aria-hidden="true"></div>
               </a>
+              <button
+                type="button"
+                onClick={onWorkClick}
+                className="cta-secondary text-base sm:text-lg"
+              >
+                View case studies
+                <Play className="w-4 h-4" />
+              </button>
             </div>
+            <p className={`section-microcopy text-text-secondary transition-all duration-1000 ease-out ${elementsVisible.cta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+              No sales pitch — just product advice tailored to your roadmap.
+            </p>
           </div>
         </div>
 

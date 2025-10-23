@@ -55,15 +55,16 @@ const FAQ = ({ onContactClick }) => {
   }
 
   return (
-    <section className="bg-bg-secondary py-12 sm:py-16 md:py-20 lg:py-24" role="region" aria-labelledby="faq-heading">
+    <section className="section-shell surface-alt" role="region" aria-labelledby="faq-heading">
       <div className="max-w-4xl mx-auto px-5 lg:px-20">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 id="faq-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
+        <div className="text-center mb-16">
+          <span className="section-eyebrow">Support</span>
+          <h2 id="faq-heading" className="section-heading mt-4">
             Frequently asked questions
           </h2>
-          <p className="text-xl text-text-secondary leading-relaxed">
-            If you don't find your answer here, feel free to reach out!
+          <p className="section-subheading mt-6">
+            If you don&apos;t find your answer here, feel free to reach out — we respond within one business day.
           </p>
         </div>
 
@@ -85,9 +86,9 @@ const FAQ = ({ onContactClick }) => {
                 </h3>
                 <div className="flex-shrink-0">
                   {openItems.has(faq.id) ? (
-                    <Minus className="w-6 h-6 text-accent-primary" />
+                    <Minus className="w-6 h-6 text-accent-primary" aria-hidden="true" />
                   ) : (
-                    <Plus className="w-6 h-6 text-accent-primary" />
+                    <Plus className="w-6 h-6 text-accent-primary" aria-hidden="true" />
                   )}
                 </div>
               </button>
@@ -109,19 +110,22 @@ const FAQ = ({ onContactClick }) => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center">
-          <p className="text-text-secondary mb-6">
-            Still have questions? We'd love to hear from you.
+        <div className="text-center space-y-4">
+          <p className="text-text-secondary">
+            Still have questions? We&apos;d love to hear from you.
           </p>
           <a
             href="https://cal.com/techinium/15min"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent-gradient text-white px-8 py-4 rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-1"
+            className="cta-secondary inline-flex"
             aria-label="Contact us with your questions"
           >
-            Contact Us
+            Ask a question
           </a>
+          <p className="text-sm text-text-tertiary">
+            Prefer async? Drop us a note and we&apos;ll send a Loom walkthrough.
+          </p>
         </div>
       </div>
     </section>

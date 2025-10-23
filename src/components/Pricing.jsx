@@ -60,32 +60,33 @@ const Pricing = ({ onContactClick }) => {
   ]
 
   return (
-    <section className="bg-bg-primary py-12 sm:py-16 md:py-20 lg:py-24" role="region" aria-labelledby="pricing-heading">
-      <div className="max-w-7xl mx-auto px-5 lg:px-20">
+    <section className="section-shell" role="region" aria-labelledby="pricing-heading">
+      <div className="container-light">
         {/* Section Header */}
-        <div className="text-center mb-12 animate-on-scroll">
-          <h2 id="pricing-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
-            Pricing
+        <div className="text-center mb-16 animate-on-scroll">
+          <span className="section-eyebrow">Engagements</span>
+          <h2 id="pricing-heading" className="section-heading mt-4">
+            Pricing built for momentum
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Simple, Transparent Pricing for Startups
+          <p className="section-subheading mt-6">
+            Flat-rate pricing, no surprise retainers, and every package includes strategy, design, build, and launch support.
           </p>
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`bg-bg-primary border border-ui-border rounded-2xl p-8 shadow-card hover:shadow-soft transition-all duration-400 hover:-translate-y-1 animate-on-scroll hover-lift hover-glow`}
+              className={`card-light animate-on-scroll h-full flex flex-col justify-between`}
               style={{ animationDelay: `${index * 0.3}s` }}
             >
               {/* Package Header */}
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-text-primary mb-2">
+              <div className="text-center mb-8 space-y-3">
+                <h3 className="text-2xl font-bold text-text-primary">
                   {pkg.name}
                 </h3>
-                <div className="text-3xl font-bold text-accent-primary mb-4">
+                <div className="text-3xl font-bold text-accent-primary">
                   {pkg.price}
                 </div>
                 <p className="text-text-secondary leading-relaxed">
@@ -98,7 +99,7 @@ const Pricing = ({ onContactClick }) => {
                 {pkg.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center gap-3">
                     <div className="w-5 h-5 bg-accent-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-white" />
+                      <Check className="w-3 h-3 text-white" aria-hidden="true" />
                     </div>
                     <span className="text-text-secondary">{feature}</span>
                   </li>
@@ -106,25 +107,38 @@ const Pricing = ({ onContactClick }) => {
               </ul>
 
               {/* CTA Button */}
-              <a
-                href="https://cal.com/techinium/15min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-accent-gradient text-white py-4 px-6 rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
-                aria-label={`${pkg.cta} for ${pkg.name}`}
-              >
-                {pkg.cta}
-                <ArrowRight className="w-4 h-4" />
-              </a>
+              <div className="space-y-3">
+                <a
+                  href="https://cal.com/techinium/15min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cta-primary w-full justify-center"
+                  aria-label={`${pkg.cta} for ${pkg.name}`}
+                >
+                  {pkg.cta}
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <p className="text-sm text-text-tertiary text-center">
+                  No commitment up front — we outline the deliverables together first.
+                </p>
+              </div>
             </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center animate-on-scroll">
-          <p className="text-text-secondary mb-4">
-            or reach me out on WhatsApp / Telegram :3
+        <div className="text-center animate-on-scroll space-y-4">
+          <p className="text-text-secondary">
+            Need a custom engagement or ongoing product squad? Let’s tailor a plan for your roadmap.
           </p>
+          <button
+            type="button"
+            onClick={() => onContactClick?.('Custom Pricing')}
+            className="cta-secondary"
+          >
+            Build a custom plan
+            <ArrowRight className="w-4 h-4" />
+          </button>
         </div>
       </div>
     </section>
