@@ -214,7 +214,7 @@ const Process = ({ onContactClick }) => {
                   <h3 className="text-3xl font-bold text-gray-900 mb-4">{step.title}</h3>
                   <p className="text-lg text-gray-600 mb-6 leading-relaxed">{step.description}</p>
                   
-                  <div className="grid grid-cols-2 gap-2 mb-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
                     {step.tools.map((tool, toolIndex) => (
                       <div key={toolIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
@@ -358,4 +358,3 @@ const Process = ({ onContactClick }) => {
 }
 
 export default Process
-

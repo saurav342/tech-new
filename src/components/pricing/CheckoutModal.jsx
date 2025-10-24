@@ -28,13 +28,11 @@ const ensureRazorpayIsAvailable = () => {
   return razorpayLoaderPromise
 }
 
-const derivePlanKey = (tierId = '') =>
-  `VITE_RAZORPAY_PLAN_${tierId.replace(/-/g, '_').toUpperCase()}`
-
 const CheckoutModal = ({
   stage = 'idle',
   tier,
   categoryLabel,
+  amountInPaise,
   paymentDetails,
   error,
   onClose,
@@ -75,11 +73,28 @@ const CheckoutModal = ({
     }
   }, [stage])
 
-  const planKey = useMemo(() => (tier ? derivePlanKey(tier.id) : ''), [tier])
-  const planId = useMemo(() => (tier ? import.meta.env[planKey] : null), [planKey, tier])
-  const razorpayKeyId = import.meta.env.VITE_RAZORPAY_KEY_ID || "rzp_test_RXHtqdXfswzCLE";
-  const subscriptionEndpoint = import.meta.env.VITE_RAZORPAY_SUBSCRIPTION_ENDPOINT
-  const testSubscriptionId = import.meta.env.VITE_RAZORPAY_TEST_SUBSCRIPTION_ID || 123;
+  const razorpayKeyId = import.meta.env.VITE_RAZORPAY_KEY_ID || 'rzp_live_ko1hUFIKKetTOr'
+  const orderEndpoint = import.meta.env.VITE_RAZORPAY_ORDER_ENDPOINT || ''
+  const testOrderId = import.meta.env.VITE_RAZORPAY_TEST_ORDER_ID || ''
+  const resolvedAmountPaise = useMemo(() => {
+    if (typeof amountInPaise === 'number' && amountInPaise > 0) {
+      return Math.round(amountInPaise)
+    }
+    if (!tier?.priceInr) {
+      return null
+    }
+    const numericValue = parseFloat(String(tier.priceInr).replace(/[^\d.]/g, ''))
+    if (!Number.isFinite(numericValue) || numericValue <= 0) {
+      return null
+    }
+    return Math.round(numericValue * 100)
+  }, [amountInPaise, tier])
+
+  useEffect(() => {
+    if (isOpen && stage === 'review' && (!resolvedAmountPaise || Number.isNaN(resolvedAmountPaise))) {
+      setInternalError('Pricing is currently unavailable for this package. Please contact our team to continue.')
+    }
+  }, [isOpen, resolvedAmountPaise, stage])
 
   const closeModal = useCallback(() => {
     if (stage === 'processing') {
@@ -91,34 +106,33 @@ const CheckoutModal = ({
     onClose?.()
   }, [onClose, scheduleConfirmed, stage])
 
-  const initiateSubscription = useCallback(async () => {
+  const initiateOrder = useCallback(async () => {
     if (!tier) return null
 
     if (!razorpayKeyId) {
       throw new Error('Missing Razorpay key id. Add VITE_RAZORPAY_KEY_ID to your environment.')
     }
 
-    if (!planId && !testSubscriptionId && !subscriptionEndpoint) {
-      throw new Error(
-        `Missing plan configuration for ${tier.title}. Define ${planKey} in your .env or provide VITE_RAZORPAY_SUBSCRIPTION_ENDPOINT.`,
-      )
+    if (!resolvedAmountPaise || Number.isNaN(resolvedAmountPaise)) {
+      throw new Error(`Unable to determine pricing for ${tier.title}. Provide a valid INR price.`)
     }
 
-    if (testSubscriptionId) {
-      return { subscriptionId: testSubscriptionId }
+    if (testOrderId) {
+      return { orderId: testOrderId }
     }
 
-    if (!subscriptionEndpoint) {
-      throw new Error('Subscription endpoint is not configured. Add VITE_RAZORPAY_SUBSCRIPTION_ENDPOINT.')
+    if (!orderEndpoint) {
+      throw new Error('Order endpoint is not configured. Add VITE_RAZORPAY_ORDER_ENDPOINT.')
     }
 
-    const response = await fetch(subscriptionEndpoint, {
+    const response = await fetch(orderEndpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        planId,
+        amount: resolvedAmountPaise,
+        currency: 'INR',
         tierId: tier.id,
         tierName: tier.title,
         categoryLabel,
@@ -127,16 +141,16 @@ const CheckoutModal = ({
 
     if (!response.ok) {
       const message = await response.text()
-      throw new Error(message || 'Failed to create subscription with Razorpay.')
+      throw new Error(message || 'Failed to create order with Razorpay.')
     }
 
     const data = await response.json()
     return {
-      subscriptionId: data?.subscriptionId ?? data?.subscription_id ?? null,
-      shortId: data?.shortId ?? data?.id ?? null,
+      orderId: data?.orderId ?? data?.order_id ?? data?.id ?? null,
+      shortId: data?.shortId ?? data?.receipt ?? data?.reference_id ?? null,
       customer: data?.customer ?? null,
     }
-  }, [tier, planId, planKey, categoryLabel, razorpayKeyId, subscriptionEndpoint, testSubscriptionId])
+  }, [tier, categoryLabel, orderEndpoint, razorpayKeyId, resolvedAmountPaise, testOrderId])
 
   const handleProceedToPayment = useCallback(async () => {
     if (!tier) return
@@ -146,17 +160,19 @@ const CheckoutModal = ({
       onStageChange?.('processing')
 
       const Razorpay = await ensureRazorpayIsAvailable()
-      const subscriptionData = await initiateSubscription()
+      const orderData = await initiateOrder()
 
-      if (!subscriptionData || !subscriptionData.subscriptionId) {
-        throw new Error('Subscription id missing from backend response.')
+      if (!orderData || !orderData.orderId) {
+        throw new Error('Order id missing from backend response.')
       }
 
       const checkoutOptions = {
         key: razorpayKeyId,
-        subscription_id: subscriptionData.subscriptionId,
+        amount: resolvedAmountPaise,
+        currency: 'INR',
+        order_id: orderData.orderId,
         name: 'Techinium',
-        description: `${tier.title} Subscription`,
+        description: `${tier.title} — One-time payment`,
         theme: {
           color: '#FF6B35',
         },
@@ -165,11 +181,11 @@ const CheckoutModal = ({
           tierName: tier.title,
           category: categoryLabel,
         },
-        prefill: subscriptionData.customer
+        prefill: orderData.customer
           ? {
-              name: subscriptionData.customer.name ?? '',
-              email: subscriptionData.customer.email ?? '',
-              contact: subscriptionData.customer.phone ?? '',
+              name: orderData.customer.name ?? '',
+              email: orderData.customer.email ?? '',
+              contact: orderData.customer.phone ?? '',
             }
           : undefined,
         modal: {
@@ -185,9 +201,9 @@ const CheckoutModal = ({
             tierId: tier.id,
             tierName: tier.title,
             categoryLabel,
-            subscriptionId: subscriptionData.subscriptionId,
-            shortId: subscriptionData.shortId,
-            customer: subscriptionData.customer ?? null,
+            orderId: orderData.orderId,
+            shortId: orderData.shortId,
+            customer: orderData.customer ?? null,
             paidAt: new Date().toISOString(),
           })
         },
@@ -207,7 +223,7 @@ const CheckoutModal = ({
       setInternalError(message)
       onPaymentError?.(message)
     }
-  }, [categoryLabel, initiateSubscription, onPaymentError, onPaymentSuccess, onStageChange, razorpayKeyId, tier])
+  }, [categoryLabel, initiateOrder, onPaymentError, onPaymentSuccess, onStageChange, razorpayKeyId, resolvedAmountPaise, tier])
 
   const handleConfirmScheduled = useCallback(() => {
     setScheduleConfirmed(true)
@@ -263,14 +279,14 @@ const CheckoutModal = ({
                 <div className="space-y-2">
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-text-tertiary">Checkout</p>
                   <h3 className="text-2xl font-display font-semibold text-text-primary">
-                    Confirm your subscription
+                    Confirm your booking
                   </h3>
                   <p className="text-sm text-text-secondary">
-                    Complete the payment to lock in your slot. You&apos;ll be redirected to schedule a kickoff call right after payment.
+                    Complete a secure one-time payment to lock in your slot. You&apos;ll be redirected to schedule a kickoff call right after payment.
                   </p>
-                  {planId ? (
+                  {resolvedAmountPaise ? (
                     <p className="text-xs text-text-tertiary">
-                      Plan reference: <span className="font-mono">{planId}</span>
+                      Charged in INR: <span className="font-mono">₹{(resolvedAmountPaise / 100).toLocaleString('en-IN')}</span>
                     </p>
                   ) : null}
                 </div>
@@ -280,7 +296,7 @@ const CheckoutModal = ({
                   <ul className="mt-3 space-y-2 text-sm text-text-secondary">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent-primary" aria-hidden="true" />
-                      Pay securely via Razorpay subscription checkout
+                      Pay securely via Razorpay using cards, UPI, net banking, or wallet
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent-primary" aria-hidden="true" />
@@ -307,7 +323,8 @@ const CheckoutModal = ({
                   <button
                     type="button"
                     onClick={handleProceedToPayment}
-                    className="cta-primary inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-base font-medium"
+                    disabled={!resolvedAmountPaise}
+                    className="cta-primary inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-base font-medium disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     Proceed to Payment
                   </button>
@@ -327,9 +344,9 @@ const CheckoutModal = ({
               <div className="flex flex-col items-center justify-center gap-4 py-16 text-center">
                 <Loader2 className="h-12 w-12 animate-spin text-accent-primary" aria-hidden="true" />
                 <div>
-                  <p className="text-lg font-semibold text-text-primary">Opening secure checkout…</p>
+                  <p className="text-lg font-semibold text-text-primary">Opening secure Razorpay checkout…</p>
                   <p className="mt-2 text-sm text-text-secondary">
-                    Please do not refresh the page. You&apos;ll be redirected to Razorpay to complete your subscription.
+                    Please do not refresh the page. You&apos;ll be redirected to complete your payment.
                   </p>
                 </div>
               </div>
@@ -376,13 +393,21 @@ const CheckoutModal = ({
                       <dt className="text-text-tertiary">Plan</dt>
                       <dd className="font-medium text-text-primary">{tier?.title}</dd>
                     </div>
+                    {resolvedAmountPaise ? (
+                      <div className="flex items-center justify-between gap-4">
+                        <dt className="text-text-tertiary">Amount Paid</dt>
+                        <dd className="font-medium text-text-primary">
+                          ₹{(resolvedAmountPaise / 100).toLocaleString('en-IN')}
+                        </dd>
+                      </div>
+                    ) : null}
                     <div className="flex items-center justify-between gap-4">
                       <dt className="text-text-tertiary">Payment ID</dt>
                       <dd className="font-mono text-xs">{paymentDetails.razorpay_payment_id ?? 'n/a'}</dd>
                     </div>
                     <div className="flex items-center justify-between gap-4">
-                      <dt className="text-text-tertiary">Subscription ID</dt>
-                      <dd className="font-mono text-xs">{paymentDetails.subscriptionId ?? 'n/a'}</dd>
+                      <dt className="text-text-tertiary">Order ID</dt>
+                      <dd className="font-mono text-xs">{paymentDetails.razorpay_order_id ?? paymentDetails.orderId ?? 'n/a'}</dd>
                     </div>
                     {paymentDetails.shortId ? (
                       <div className="flex items-center justify-between gap-4">

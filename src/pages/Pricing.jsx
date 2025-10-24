@@ -13,6 +13,7 @@ const Pricing = () => {
   const [selectedTier, setSelectedTier] = useState(null)
   const [selectedCategoryLabel, setSelectedCategoryLabel] = useState('')
   const [checkoutStage, setCheckoutStage] = useState('idle')
+  const [selectedAmountPaise, setSelectedAmountPaise] = useState(null)
   const [paymentDetails, setPaymentDetails] = useState(null)
   const [checkoutError, setCheckoutError] = useState(null)
 
@@ -21,6 +22,18 @@ const Pricing = () => {
     document.title = 'Pricing | Techinium'
   }, [])
 
+  const parseInrToPaise = (value) => {
+    if (!value) return null
+
+    const normalized = String(value).replace(/[^\d.]/g, '')
+    if (!normalized) return null
+
+    const amount = parseFloat(normalized)
+    if (!Number.isFinite(amount) || amount <= 0) return null
+
+    return Math.round(amount * 100)
+  }
+
   const activeCategory = pricingCategories.find((category) => category.id === activeCategoryId) ?? pricingCategories[0]
 
   const handleTierSelect = (tier, categoryLabel) => {
@@ -28,6 +41,8 @@ const Pricing = () => {
     setSelectedCategoryLabel(categoryLabel)
     setPaymentDetails(null)
     setCheckoutError(null)
+    const amount = parseInrToPaise(tier?.priceInr)
+    setSelectedAmountPaise(amount)
     setCheckoutStage('review')
   }
 
@@ -36,6 +51,7 @@ const Pricing = () => {
     setSelectedTier(null)
     setSelectedCategoryLabel('')
     setCheckoutError(null)
+    setSelectedAmountPaise(null)
   }
 
   const handlePaymentSuccess = (details) => {
@@ -180,6 +196,7 @@ const Pricing = () => {
         stage={checkoutStage}
         tier={selectedTier}
         categoryLabel={selectedCategoryLabel}
+        amountInPaise={selectedAmountPaise}
         paymentDetails={paymentDetails}
         error={checkoutError}
         onClose={handleCloseCheckout}

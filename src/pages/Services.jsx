@@ -185,7 +185,7 @@ const Services = ({ onContactClick }) => {
                   
                   <p className="text-lg text-gray-600 mb-6 leading-relaxed">{pkg.description}</p>
                   
-                  <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                     {pkg.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-start space-x-3">
                         <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${getIconColor(pkg.color)}`}>
@@ -304,4 +304,3 @@ const Services = ({ onContactClick }) => {
 }
 
 export default Services
-
