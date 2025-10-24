@@ -101,7 +101,8 @@ const Navigation = ({ onContactClick }) => {
               aria-label="Home"
             >
               <TechiniumLogo size={40} />
-              <span>Techinium</span>
+              {/* Hide the wordmark on small screens so only the logo shows on mobile */}
+              <span className="hidden sm:inline">Techinium</span>
             </Link>
           </div>
 
@@ -186,9 +187,10 @@ const Navigation = ({ onContactClick }) => {
           />
           <div className="absolute inset-y-0 right-0 w-full max-w-xs mobile-nav-panel animate-panel-slide-in">
             <div className="flex items-center justify-between px-6 pt-6">
-              <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3">
                 <TechiniumLogo size={32} />
-                <span className="text-lg font-semibold text-text-primary">Techinium</span>
+                {/* keep the wordmark hidden on small screens inside the panel header as well */}
+                <span className="hidden sm:inline text-lg font-semibold text-text-primary">Techinium</span>
               </div>
               <button
                 onClick={toggleMobileMenu}
@@ -248,7 +250,8 @@ const Navigation = ({ onContactClick }) => {
       )}
 
       {!isMobileMenuOpen && (
-        <div className="md:hidden fixed bottom-5 inset-x-5 z-40">
+        // Hidden intentionally so the floating mobile CTA does not appear on small viewports
+        <div className="hidden fixed bottom-5 inset-x-5 z-40">
           <div className="rounded-3xl border border-ui-border bg-white/95 backdrop-blur-md shadow-lg p-4">
             <a
               href="https://cal.com/techinium/15min"
