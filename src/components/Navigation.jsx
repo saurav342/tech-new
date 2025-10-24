@@ -50,21 +50,24 @@ const Navigation = ({ onContactClick }) => {
   }, [location.pathname])
 
   const navigationItems = [
-    { name: 'Our Services', href: '#services' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'FAQ', href: '#faq' },
-    { name: 'Case Studies', href: '#case-studies' },
+    { name: 'Our Services', href: '#services', type: 'section' },
+    { name: 'Pricing', href: '/pricing', type: 'page' },
+    { name: 'FAQ', href: '#faq', type: 'section' },
+    { name: 'Case Studies', href: '#case-studies', type: 'section' },
   ]
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
-  const isActive = (path) => {
-    if (path.startsWith('#')) {
-      return location.pathname === '/' && currentHash === path
+  const isActive = (item) => {
+    if (item.type === 'section') {
+      return location.pathname === '/' && currentHash === item.href
     }
-    return location.pathname === path
+    if (item.type === 'page') {
+      return location.pathname === item.href
+    }
+    return false
   }
 
   const handleSectionNavigation = (event, href) => {
@@ -106,21 +109,38 @@ const Navigation = ({ onContactClick }) => {
           <div className="hidden md:block">
             <div className="ml-8 flex items-baseline space-x-6">
               {navigationItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(event) => handleSectionNavigation(event, item.href)}
-                  className={`px-4 py-3 text-base font-medium transition-all duration-300 relative group cursor-pointer ${
-                    isActive(item.href)
+                item.type === 'page' ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`px-4 py-3 text-base font-medium transition-all duration-300 relative group cursor-pointer ${
+                      isActive(item)
+                        ? 'text-accent-primary'
+                        : 'text-text-secondary hover:text-text-primary'
+                    }`}
+                  >
+                    {item.name}
+                    <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-accent-gradient transition-all duration-300 ${
+                      isActive(item) ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                    }`}></span>
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={(event) => handleSectionNavigation(event, item.href)}
+                    className={`px-4 py-3 text-base font-medium transition-all duration-300 relative group cursor-pointer ${
+                      isActive(item)
                       ? 'text-accent-primary'
                       : 'text-text-secondary hover:text-text-primary'
                   }`}
                 >
                   {item.name}
                   <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-accent-gradient transition-all duration-300 ${
-                    isActive(item.href) ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                    isActive(item) ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
                   }`}></span>
-                </a>
+                  </a>
+                )
               ))}
             </div>
           </div>
@@ -180,18 +200,33 @@ const Navigation = ({ onContactClick }) => {
             </div>
             <div className="px-6 pt-6 pb-10 space-y-2">
               {navigationItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(event) => handleSectionNavigation(event, item.href)}
-                  className={`block px-4 py-3 text-base font-medium transition-colors rounded-xl ${
-                    isActive(item.href)
-                      ? 'text-accent-primary bg-accent-primary/10'
-                      : 'text-text-secondary hover:text-text-primary hover:bg-white'
-                  }`}
-                >
-                  {item.name}
-                </a>
+                item.type === 'page' ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`block px-4 py-3 text-base font-medium transition-colors rounded-xl ${
+                      isActive(item)
+                        ? 'text-accent-primary bg-accent-primary/10'
+                        : 'text-text-secondary hover:text-text-primary hover:bg-white'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={(event) => handleSectionNavigation(event, item.href)}
+                    className={`block px-4 py-3 text-base font-medium transition-colors rounded-xl ${
+                      isActive(item)
+                        ? 'text-accent-primary bg-accent-primary/10'
+                        : 'text-text-secondary hover:text-text-primary hover:bg-white'
+                    }`}
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
               <div className="pt-6">
                 <a

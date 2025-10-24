@@ -3,7 +3,6 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
 import Process from '../components/Process'
-import Pricing from '../components/Pricing'
 import CaseStudies from '../components/CaseStudies'
 import Testimonials from '../components/Testimonials'
 import FAQ from '../components/FAQ'
@@ -112,11 +111,6 @@ const Home = ({ onContactClick }) => {
       {/* Process Section */}
       <section id="process" className="section-transition">
         <Process onContactClick={onContactClick} />
-      </section>
-      
-      {/* Pricing Section */}
-      <section id="pricing" className="section-transition">
-        <Pricing onContactClick={onContactClick} />
       </section>
       
       {/* Case Studies Section */}
