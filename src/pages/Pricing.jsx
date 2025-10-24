@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { pricingCategories, addOnServices, paymentPlans, satisfactionGuarantee, consultationDetails, whyTechiniumList, ctaBanner } from '../data/pricing'
+import CheckoutModal from '../components/pricing/CheckoutModal'
 import PricingTabs from '../components/pricing/PricingTabs'
 import TierCard from '../components/pricing/TierCard'
 import AddOns from '../components/pricing/AddOns'
@@ -9,6 +10,11 @@ import ConsultationBanner from '../components/pricing/ConsultationBanner'
 
 const Pricing = () => {
   const [activeCategoryId, setActiveCategoryId] = useState(pricingCategories[0]?.id ?? '')
+  const [selectedTier, setSelectedTier] = useState(null)
+  const [selectedCategoryLabel, setSelectedCategoryLabel] = useState('')
+  const [checkoutStage, setCheckoutStage] = useState('idle')
+  const [paymentDetails, setPaymentDetails] = useState(null)
+  const [checkoutError, setCheckoutError] = useState(null)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -16,6 +22,38 @@ const Pricing = () => {
   }, [])
 
   const activeCategory = pricingCategories.find((category) => category.id === activeCategoryId) ?? pricingCategories[0]
+
+  const handleTierSelect = (tier, categoryLabel) => {
+    setSelectedTier(tier)
+    setSelectedCategoryLabel(categoryLabel)
+    setPaymentDetails(null)
+    setCheckoutError(null)
+    setCheckoutStage('review')
+  }
+
+  const handleCloseCheckout = () => {
+    setCheckoutStage('idle')
+    setSelectedTier(null)
+    setSelectedCategoryLabel('')
+    setCheckoutError(null)
+  }
+
+  const handlePaymentSuccess = (details) => {
+    setPaymentDetails(details)
+    setCheckoutStage('success')
+  }
+
+  const handleCheckoutError = (message) => {
+    setCheckoutError(message)
+    setCheckoutStage('error')
+  }
+
+  const handleStageChange = (nextStage) => {
+    if (nextStage === 'review') {
+      setCheckoutError(null)
+    }
+    setCheckoutStage(nextStage)
+  }
 
   return (
     <div className="bg-gradient-to-b from-white via-white to-bg-secondary text-text-primary">
@@ -115,7 +153,12 @@ const Pricing = () => {
                   className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3"
                 >
                   {activeCategory.tiers.map((tier) => (
-                    <TierCard key={tier.id} tier={tier} categoryLabel={activeCategory.label} />
+                    <TierCard
+                      key={tier.id}
+                      tier={tier}
+                      categoryLabel={activeCategory.label}
+                      onSelectTier={handleTierSelect}
+                    />
                   ))}
                 </motion.div>
               </AnimatePresence>
@@ -132,6 +175,18 @@ const Pricing = () => {
           <ConsultationBanner consultation={consultationDetails} ctaBanner={ctaBanner} />
         </div>
       </div>
+
+      <CheckoutModal
+        stage={checkoutStage}
+        tier={selectedTier}
+        categoryLabel={selectedCategoryLabel}
+        paymentDetails={paymentDetails}
+        error={checkoutError}
+        onClose={handleCloseCheckout}
+        onPaymentSuccess={handlePaymentSuccess}
+        onPaymentError={handleCheckoutError}
+        onStageChange={handleStageChange}
+      />
     </div>
   )
 }

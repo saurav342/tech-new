@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { CheckCircle2, Clock, Sparkles } from 'lucide-react'
 
-const TierCard = ({ tier, categoryLabel = '' }) => {
+const TierCard = ({ tier, categoryLabel = '', onSelectTier }) => {
   const {
     emoji,
     tierLabel,
@@ -30,6 +30,12 @@ const TierCard = ({ tier, categoryLabel = '' }) => {
       : 'bg-secondary-100 text-text-secondary'
 
   const linkHref = `/contact?service=${categoryLabel?.toLowerCase().replace(/\s+/g, '-')}&tier=${id}`
+  const shouldUseButton = typeof onSelectTier === 'function'
+  const handleSelectTier = () => {
+    if (shouldUseButton) {
+      onSelectTier(tier, categoryLabel)
+    }
+  }
 
   return (
     <motion.article
@@ -84,16 +90,30 @@ const TierCard = ({ tier, categoryLabel = '' }) => {
       </div>
 
       <div className="mt-auto pt-4">
-        <a
-          href={linkHref}
-          className={`w-full inline-flex justify-center items-center gap-2 rounded-2xl px-6 py-3 font-medium transition-all duration-300 ${
-            isPremium
-              ? 'bg-accent-gradient text-white shadow-[0_10px_30px_rgba(233,30,99,0.35)] hover:shadow-[0_16px_45px_rgba(233,30,99,0.45)]'
-              : 'cta-primary justify-center'
-          }`}
-        >
-          {ctaLabel}
-        </a>
+        {shouldUseButton ? (
+          <button
+            type="button"
+            onClick={handleSelectTier}
+            className={`w-full inline-flex justify-center items-center gap-2 rounded-2xl px-6 py-3 font-medium transition-all duration-300 ${
+              isPremium
+                ? 'bg-accent-gradient text-white shadow-[0_10px_30px_rgba(233,30,99,0.35)] hover:shadow-[0_16px_45px_rgba(233,30,99,0.45)]'
+                : 'cta-primary justify-center'
+            }`}
+          >
+            {ctaLabel}
+          </button>
+        ) : (
+          <a
+            href={linkHref}
+            className={`w-full inline-flex justify-center items-center gap-2 rounded-2xl px-6 py-3 font-medium transition-all duration-300 ${
+              isPremium
+                ? 'bg-accent-gradient text-white shadow-[0_10px_30px_rgba(233,30,99,0.35)] hover:shadow-[0_16px_45px_rgba(233,30,99,0.45)]'
+                : 'cta-primary justify-center'
+            }`}
+          >
+            {ctaLabel}
+          </a>
+        )}
       </div>
     </motion.article>
   )
