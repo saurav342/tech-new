@@ -52,6 +52,7 @@ const Navigation = ({ onContactClick }) => {
   const navigationItems = [
     { name: 'Our Services', href: '#services', type: 'section' },
     { name: 'Pricing', href: '/pricing', type: 'page' },
+    { name: 'Portfolio', href: '/portfolio', type: 'page' },
     { name: 'FAQ', href: '#faq', type: 'section' },
     { name: 'Case Studies', href: '#case-studies', type: 'section' },
   ]

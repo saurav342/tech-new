@@ -41,6 +41,7 @@ const Footer = ({ onContactClick }) => {
       title: 'Resources',
       links: [
         { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Portfolio', href: '/portfolio' },
         { name: 'Blog', href: '/blog' },
         { name: 'Design System', href: '/design-system' },
         { name: 'Open Source', href: '/open-source' },

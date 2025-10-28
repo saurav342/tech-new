@@ -10,6 +10,7 @@ import Pricing from './pages/Pricing'
 import CaseStudies from './pages/CaseStudies'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Portfolio from './pages/Portfolio'
 
 function App() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false)
@@ -60,6 +61,7 @@ function App() {
           <Route path="/process" element={<Process onContactClick={openContactModal} />} />
           <Route path="/pricing" element={<Pricing onContactClick={openContactModal} />} />
           <Route path="/case-studies" element={<CaseStudies onContactClick={openContactModal} />} />
+          <Route path="/portfolio" element={<Portfolio onContactClick={openContactModal} />} />
           <Route path="/about" element={<About onContactClick={openContactModal} />} />
           <Route path="/contact" element={<Contact onContactClick={openContactModal} />} />
         </Routes>
@@ -77,4 +79,3 @@ function App() {
 }
 
 export default App
-
