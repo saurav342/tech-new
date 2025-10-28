@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { ArrowRight, TrendingUp, Clock, Users } from 'lucide-react'
 
 /**
@@ -175,16 +176,26 @@ const CaseStudies = ({ onContactClick }) => {
           <p className="text-text-secondary">
             Want to see more case studies or discuss your project?
           </p>
-          <a
-            href="https://cal.com/techinium/15min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cta-primary justify-center inline-flex"
-            aria-label="View all case studies"
-          >
-            View All Case Studies
-            <ArrowRight className="w-5 h-5" />
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link
+              to="/portfolio"
+              className="cta-secondary inline-flex justify-center"
+              aria-label="Explore our full portfolio"
+            >
+              Explore full portfolio
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <a
+              href="https://cal.com/techinium/15min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-primary inline-flex justify-center"
+              aria-label="Book a case study review call"
+            >
+              Book a case study review
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          </div>
           <p className="text-sm text-text-tertiary">
             We’ll unpack your use case and send a tailored timeline within 24 hours.
           </p>
